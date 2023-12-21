@@ -1,0 +1,14 @@
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\bin\Debug\Personel_Takip.exe.config
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\bin\Debug\Personel_Takip.exe
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\bin\Debug\Personel_Takip.pdb
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.csproj.AssemblyReference.cache
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.Form1.resources
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.Properties.Resources.resources
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.csproj.GenerateResource.cache
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.csproj.CoreCompileInputs.cache
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.exe
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.pdb
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.Dogrulama.resources
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.Form2.resources
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.Form3.resources
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.Form4.resources
