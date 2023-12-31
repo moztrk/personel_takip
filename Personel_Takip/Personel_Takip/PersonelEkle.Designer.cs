@@ -1,6 +1,6 @@
 ﻿namespace Personel_Takip
 {
-    partial class Form4
+    partial class PersonelEkle
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonelEkle));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,6 +41,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonListe = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.labelDolulukOrani = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +96,7 @@
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(100, 22);
             this.txtAd.TabIndex = 5;
+            this.txtAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAd_KeyPress);
             // 
             // txtSoyad
             // 
@@ -101,13 +104,16 @@
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(100, 22);
             this.txtSoyad.TabIndex = 6;
+            this.txtSoyad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoyad_KeyPress);
             // 
             // txtTc
             // 
             this.txtTc.Location = new System.Drawing.Point(158, 195);
+            this.txtTc.MaxLength = 11;
             this.txtTc.Name = "txtTc";
             this.txtTc.Size = new System.Drawing.Size(100, 22);
             this.txtTc.TabIndex = 7;
+            this.txtTc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTc_KeyPress);
             // 
             // txtMaas
             // 
@@ -115,6 +121,7 @@
             this.txtMaas.Name = "txtMaas";
             this.txtMaas.Size = new System.Drawing.Size(100, 22);
             this.txtMaas.TabIndex = 9;
+            this.txtMaas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaas_KeyPress);
             // 
             // button1
             // 
@@ -130,17 +137,17 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(341, 36);
+            this.dataGridView1.Location = new System.Drawing.Point(324, 36);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(600, 253);
+            this.dataGridView1.Size = new System.Drawing.Size(833, 333);
             this.dataGridView1.TabIndex = 11;
             // 
             // buttonListe
             // 
             this.buttonListe.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.buttonListe.Location = new System.Drawing.Point(521, 307);
+            this.buttonListe.Location = new System.Drawing.Point(45, 412);
             this.buttonListe.Name = "buttonListe";
             this.buttonListe.Size = new System.Drawing.Size(155, 40);
             this.buttonListe.TabIndex = 12;
@@ -151,7 +158,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(708, 369);
+            this.button2.Location = new System.Drawing.Point(1003, 421);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(145, 54);
             this.button2.TabIndex = 13;
@@ -159,12 +166,31 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Form4
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(350, 397);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(183, 36);
+            this.progressBar1.TabIndex = 14;
+            // 
+            // labelDolulukOrani
+            // 
+            this.labelDolulukOrani.BackColor = System.Drawing.Color.Transparent;
+            this.labelDolulukOrani.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelDolulukOrani.Location = new System.Drawing.Point(588, 397);
+            this.labelDolulukOrani.Name = "labelDolulukOrani";
+            this.labelDolulukOrani.Size = new System.Drawing.Size(283, 36);
+            this.labelDolulukOrani.TabIndex = 15;
+            this.labelDolulukOrani.Text = "\r\n";
+            // 
+            // PersonelEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Personel_Takip.Properties.Resources._374296;
-            this.ClientSize = new System.Drawing.Size(977, 487);
+            this.ClientSize = new System.Drawing.Size(1181, 523);
+            this.Controls.Add(this.labelDolulukOrani);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.buttonListe);
             this.Controls.Add(this.dataGridView1);
@@ -177,9 +203,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form4";
+            this.Name = "PersonelEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personel Ekle";
             this.Load += new System.EventHandler(this.Form4_Load);
@@ -203,5 +228,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonListe;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label labelDolulukOrani;
     }
 }

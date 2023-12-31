@@ -48,7 +48,7 @@ namespace Personel_Takip
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            GirisEkrani form1 = new GirisEkrani();
             form1.Show();
             this.Hide();
         }

@@ -11,9 +11,9 @@ using System.Data.OleDb;
 
 namespace Personel_Takip
 {
-    public partial class Form1 : Form
+    public partial class GirisEkrani : Form
     {
-        public Form1()
+        public GirisEkrani()
         {
             InitializeComponent();
         }
@@ -38,7 +38,7 @@ namespace Personel_Takip
             reader = cmd.ExecuteReader();
             if (reader.Read())
             {
-                Form2 f2 = new Form2();
+                Menu f2 = new Menu();
                 f2.Show();
                 this.Hide();
             }
@@ -50,7 +50,14 @@ namespace Personel_Takip
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Çıkış yapmak  istediğinize emin misiniz?", "Uyarı"
+                , MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            // messagebox icon  ünlem 
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+           
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

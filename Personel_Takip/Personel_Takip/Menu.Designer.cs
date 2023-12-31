@@ -1,6 +1,6 @@
 ﻿namespace Personel_Takip
 {
-    partial class Form2
+    partial class Menu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.buttonListele = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.buttonEkle = new System.Windows.Forms.Button();
@@ -52,7 +52,7 @@
             this.buttonListele.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.buttonListele.Size = new System.Drawing.Size(204, 57);
             this.buttonListele.TabIndex = 0;
-            this.buttonListele.Text = "Personel Listele";
+            this.buttonListele.Text = "Personel Listesi";
             this.buttonListele.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonListele.UseVisualStyleBackColor = true;
             this.buttonListele.Click += new System.EventHandler(this.button1_Click);
@@ -146,7 +146,7 @@
             this.label1.Text = "Menü";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Form2
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -160,10 +160,9 @@
             this.Controls.Add(this.buttonSil);
             this.Controls.Add(this.buttonEkle);
             this.Controls.Add(this.buttonListele);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(926, 540);
-            this.Name = "Form2";
+            this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

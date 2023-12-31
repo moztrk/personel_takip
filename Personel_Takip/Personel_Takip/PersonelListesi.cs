@@ -12,9 +12,9 @@ using System.Data.OleDb;
 
 namespace Personel_Takip
 {
-    public partial class Form3 : Form
+    public partial class PersonelListesi : Form
     {
-        public Form3()
+        public PersonelListesi()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace Personel_Takip
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Menu form2 = new Menu();
             form2.Show();
             this.Hide();
         }
@@ -41,6 +41,7 @@ namespace Personel_Takip
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+          
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -50,6 +51,15 @@ namespace Personel_Takip
         private void Form3_Load(object sender, EventArgs e)
         {
             Listele();
+            // tablo başlıklarının ismini çevirme
+            dataGridView1.Columns["p_no"].HeaderText = "Personel Numarası";
+            dataGridView1.Columns["p_ad"].HeaderText = "Adı";
+            dataGridView1.Columns["p_soyad"].HeaderText = "Soyadı";
+            dataGridView1.Columns["p_maas"].HeaderText = "Maaş";
+            dataGridView1.Columns["p_isegiris"].HeaderText = "İşe Giriş Tarihi";
+            dataGridView1.Columns["p_kimlik"].HeaderText = "TC Kimlik Numarası";
         }
+
+       
     }
 }

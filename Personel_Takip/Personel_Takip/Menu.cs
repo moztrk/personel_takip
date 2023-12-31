@@ -11,9 +11,9 @@ using System.Data.OleDb;
 
 namespace Personel_Takip
 {
-    public partial class Form2 : Form
+    public partial class Menu : Form
     {
-        public Form2()
+        public Menu()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace Personel_Takip
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            PersonelListesi form3 = new PersonelListesi();
             form3.Show();
             this.Hide();
           
@@ -34,9 +34,15 @@ namespace Personel_Takip
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
-            this.Hide();
+            DialogResult result = MessageBox.Show("Giriş ekranına dönmek istediğinize emin misiniz?", "Uyarı"
+                , MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            // messagebox icon  ünlem 
+            if (result == DialogResult.Yes)
+            {
+                GirisEkrani form1 = new GirisEkrani();
+                form1.Show();
+                this.Hide();
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -46,7 +52,7 @@ namespace Personel_Takip
 
         private void buttonEkle_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
+            PersonelEkle form4 = new PersonelEkle();
             form4.Show();
             this.Hide();
         }

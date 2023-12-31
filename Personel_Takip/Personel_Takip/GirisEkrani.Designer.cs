@@ -1,6 +1,6 @@
 ﻿namespace Personel_Takip
 {
-    partial class Form1
+    partial class GirisEkrani
     {
         /// <summary>
         /// Required designer variable.
@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GirisEkrani));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tkullanıcı = new System.Windows.Forms.TextBox();
             this.tsifre = new System.Windows.Forms.TextBox();
             this.girisButton = new System.Windows.Forms.Button();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.sifremiUnuttum = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cikisButton = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +74,7 @@
             this.tkullanıcı.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tkullanıcı.Location = new System.Drawing.Point(175, 167);
             this.tkullanıcı.Name = "tkullanıcı";
-            this.tkullanıcı.Size = new System.Drawing.Size(190, 27);
+            this.tkullanıcı.Size = new System.Drawing.Size(166, 27);
             this.tkullanıcı.TabIndex = 2;
             // 
             // tsifre
@@ -83,22 +83,32 @@
             this.tsifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tsifre.Location = new System.Drawing.Point(175, 231);
             this.tsifre.Name = "tsifre";
-            this.tsifre.PasswordChar = '*';
-            this.tsifre.Size = new System.Drawing.Size(190, 27);
+            this.tsifre.Size = new System.Drawing.Size(166, 27);
             this.tsifre.TabIndex = 3;
+            this.tsifre.UseSystemPasswordChar = true;
             // 
             // girisButton
             // 
             this.girisButton.BackColor = System.Drawing.Color.Transparent;
             this.girisButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.girisButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.girisButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.girisButton.ImageKey = "verified.png";
+            this.girisButton.ImageList = this.ımageList1;
             this.girisButton.Location = new System.Drawing.Point(175, 275);
             this.girisButton.Name = "girisButton";
-            this.girisButton.Size = new System.Drawing.Size(75, 36);
+            this.girisButton.Size = new System.Drawing.Size(100, 36);
             this.girisButton.TabIndex = 4;
             this.girisButton.Text = "Giriş";
+            this.girisButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.girisButton.UseVisualStyleBackColor = false;
             this.girisButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "verified.png");
             // 
             // sifremiUnuttum
             // 
@@ -144,18 +154,12 @@
             this.cikisButton.UseVisualStyleBackColor = true;
             this.cikisButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // ımageList1
-            // 
-            this.ımageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.ımageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // Form1
+            // GirisEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Personel_Takip.Properties.Resources._374296;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(818, 497);
             this.Controls.Add(this.cikisButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
@@ -165,10 +169,9 @@
             this.Controls.Add(this.tkullanıcı);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(818, 497);
-            this.Name = "Form1";
+            this.Name = "GirisEkrani";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PersonelGiris";
             this.Load += new System.EventHandler(this.Form1_Load);
