@@ -108,6 +108,9 @@ namespace Personel_Takip
                     kalanEklemeHakki = MaxPersonelSayisi - mevcutPersonelSayisi;
                     UpdateProgressBar();
                     MessageBox.Show($"Personel başarıyla eklendi. Kalan personel ekleme hakkınız: {--kalanEklemeHakki}");
+                    Listele();
+                    Temizle();
+
 
                 }
             }
@@ -119,6 +122,13 @@ namespace Personel_Takip
             {
                 conn.Close();
             }
+        }
+        private void Temizle()
+        {
+            txtAd.Text = string.Empty;
+            txtSoyad.Text = string.Empty;
+            txtTc.Text = string.Empty;
+            txtMaas.Text = string.Empty;
         }
 
         private void button2_Click(object sender, EventArgs e)

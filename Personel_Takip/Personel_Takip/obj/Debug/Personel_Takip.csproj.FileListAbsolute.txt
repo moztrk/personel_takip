@@ -16,3 +16,4 @@ C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_T
 C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\bin\Debug\Personel_Takip.application
 C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.exe.manifest
 C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.application
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.PersonelSil.resources

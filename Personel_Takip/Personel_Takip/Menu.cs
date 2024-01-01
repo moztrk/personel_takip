@@ -56,5 +56,17 @@ namespace Personel_Takip
             form4.Show();
             this.Hide();
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSil_Click(object sender, EventArgs e)
+        {
+            PersonelSil f1 = new PersonelSil();
+            f1.Show();  
+            this.Hide();
+        }
     }
 }

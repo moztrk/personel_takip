@@ -104,6 +104,12 @@
     <Compile Include="PersonelEkle.Designer.cs">
       <DependentUpon>PersonelEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonelSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelSil.Designer.cs">
+      <DependentUpon>PersonelSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Dogrulama.resx">
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelEkle.resx">
       <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelSil.resx">
+      <DependentUpon>PersonelSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

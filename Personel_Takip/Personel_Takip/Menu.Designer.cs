@@ -96,6 +96,7 @@
             this.buttonSil.Text = "Personel Sil";
             this.buttonSil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSil.UseVisualStyleBackColor = true;
+            this.buttonSil.Click += new System.EventHandler(this.buttonSil_Click);
             // 
             // buttonMaas
             // 
@@ -165,6 +166,7 @@
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

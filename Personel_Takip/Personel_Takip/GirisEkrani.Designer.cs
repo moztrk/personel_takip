@@ -97,7 +97,7 @@
             this.girisButton.ImageList = this.ımageList1;
             this.girisButton.Location = new System.Drawing.Point(175, 275);
             this.girisButton.Name = "girisButton";
-            this.girisButton.Size = new System.Drawing.Size(100, 36);
+            this.girisButton.Size = new System.Drawing.Size(119, 46);
             this.girisButton.TabIndex = 4;
             this.girisButton.Text = "Giriş";
             this.girisButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -148,7 +148,7 @@
             this.cikisButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cikisButton.Location = new System.Drawing.Point(565, 366);
             this.cikisButton.Name = "cikisButton";
-            this.cikisButton.Size = new System.Drawing.Size(80, 36);
+            this.cikisButton.Size = new System.Drawing.Size(94, 45);
             this.cikisButton.TabIndex = 8;
             this.cikisButton.Text = "Çıkış";
             this.cikisButton.UseVisualStyleBackColor = true;
