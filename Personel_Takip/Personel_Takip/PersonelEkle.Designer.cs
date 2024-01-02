@@ -41,7 +41,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonListe = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.ekleProgressBar = new System.Windows.Forms.ProgressBar();
             this.labelDolulukOrani = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -113,6 +113,7 @@
             this.txtTc.Name = "txtTc";
             this.txtTc.Size = new System.Drawing.Size(100, 22);
             this.txtTc.TabIndex = 7;
+            this.txtTc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTc_KeyDown);
             this.txtTc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTc_KeyPress);
             // 
             // txtMaas
@@ -121,6 +122,7 @@
             this.txtMaas.Name = "txtMaas";
             this.txtMaas.Size = new System.Drawing.Size(100, 22);
             this.txtMaas.TabIndex = 9;
+            this.txtMaas.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMaas_KeyDown);
             this.txtMaas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaas_KeyPress);
             // 
             // button1
@@ -166,12 +168,12 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // progressBar1
+            // ekleProgressBar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(350, 397);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(183, 36);
-            this.progressBar1.TabIndex = 14;
+            this.ekleProgressBar.Location = new System.Drawing.Point(350, 397);
+            this.ekleProgressBar.Name = "ekleProgressBar";
+            this.ekleProgressBar.Size = new System.Drawing.Size(183, 36);
+            this.ekleProgressBar.TabIndex = 14;
             // 
             // labelDolulukOrani
             // 
@@ -190,7 +192,7 @@
             this.BackgroundImage = global::Personel_Takip.Properties.Resources._374296;
             this.ClientSize = new System.Drawing.Size(1181, 523);
             this.Controls.Add(this.labelDolulukOrani);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.ekleProgressBar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.buttonListe);
             this.Controls.Add(this.dataGridView1);
@@ -228,7 +230,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonListe;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar ekleProgressBar;
         private System.Windows.Forms.Label labelDolulukOrani;
     }
 }

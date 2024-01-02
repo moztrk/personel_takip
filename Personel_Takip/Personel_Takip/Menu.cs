@@ -68,5 +68,12 @@ namespace Personel_Takip
             f1.Show();  
             this.Hide();
         }
+
+        private void buttonMaas_Click(object sender, EventArgs e)
+        {
+            MaasDuzenle f1 = new MaasDuzenle();
+            f1.Show();
+            this.Hide();
+        }
     }
 }

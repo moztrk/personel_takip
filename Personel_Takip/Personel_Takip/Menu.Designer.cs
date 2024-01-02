@@ -111,6 +111,7 @@
             this.buttonMaas.Text = "Maaş Düzenle";
             this.buttonMaas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonMaas.UseVisualStyleBackColor = true;
+            this.buttonMaas.Click += new System.EventHandler(this.buttonMaas_Click);
             // 
             // pictureBox1
             // 

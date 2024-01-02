@@ -147,7 +147,7 @@ namespace Personel_Takip
         {
             // ProgressBar
             int dolulukOrani = (MaxPersonelSayisi - kalanEklemeHakki) * 100 / MaxPersonelSayisi;
-            progressBar1.Value = dolulukOrani;
+            ekleProgressBar.Value = dolulukOrani;
             labelDolulukOrani.Text = $"Doluluk Oranı: {dolulukOrani}%"; // labela oran yazdırma
 
         }
@@ -186,6 +186,22 @@ namespace Personel_Takip
             if (char.IsDigit(e.KeyChar))
             {
                 e.Handled |= true;
+            }
+        }
+
+        private void txtTc_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back) // del tuşuna basınca komple silmesi için
+            {
+                txtTc.Text = string.Empty;
+            }
+        }
+
+        private void txtMaas_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+            {
+                txtMaas.Text = string.Empty;
             }
         }
     }

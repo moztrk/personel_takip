@@ -86,6 +86,18 @@
     <Compile Include="GirisEkrani.Designer.cs">
       <DependentUpon>GirisEkrani.cs</DependentUpon>
     </Compile>
+    <Compile Include="MaasDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaasDuzenle.Designer.cs">
+      <DependentUpon>MaasDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaasIsleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaasIsleri.Designer.cs">
+      <DependentUpon>MaasIsleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +129,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GirisEkrani.resx">
       <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaasDuzenle.resx">
+      <DependentUpon>MaasDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaasIsleri.resx">
+      <DependentUpon>MaasIsleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
