@@ -33,7 +33,7 @@
             this.btnNormalCıkar = new System.Windows.Forms.Button();
             this.btnNormalEkle = new System.Windows.Forms.Button();
             this.labelNormalMaas = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxNormalEkle = new System.Windows.Forms.TextBox();
             this.labelNormalPersonel = new System.Windows.Forms.Label();
             this.comboBoxNormal = new System.Windows.Forms.ComboBox();
             this.radioButtonYuzde = new System.Windows.Forms.RadioButton();
@@ -54,7 +54,7 @@
             this.panelNormal.Controls.Add(this.btnNormalCıkar);
             this.panelNormal.Controls.Add(this.btnNormalEkle);
             this.panelNormal.Controls.Add(this.labelNormalMaas);
-            this.panelNormal.Controls.Add(this.textBox2);
+            this.panelNormal.Controls.Add(this.textBoxNormalEkle);
             this.panelNormal.Controls.Add(this.labelNormalPersonel);
             this.panelNormal.Controls.Add(this.comboBoxNormal);
             this.panelNormal.Location = new System.Drawing.Point(576, 45);
@@ -71,6 +71,7 @@
             this.btnNormalCıkar.TabIndex = 5;
             this.btnNormalCıkar.Text = "Net Maaşdan Düş";
             this.btnNormalCıkar.UseVisualStyleBackColor = true;
+            this.btnNormalCıkar.Click += new System.EventHandler(this.btnNormalCıkar_Click);
             // 
             // btnNormalEkle
             // 
@@ -81,6 +82,7 @@
             this.btnNormalEkle.TabIndex = 4;
             this.btnNormalEkle.Text = "Net Maaşa Ekle";
             this.btnNormalEkle.UseVisualStyleBackColor = true;
+            this.btnNormalEkle.Click += new System.EventHandler(this.btnNormalEkle_Click);
             // 
             // labelNormalMaas
             // 
@@ -92,12 +94,12 @@
             this.labelNormalMaas.TabIndex = 3;
             this.labelNormalMaas.Text = "Eklemek\\Çıkarmak İstediğiniz  Miktar:";
             // 
-            // textBox2
+            // textBoxNormalEkle
             // 
-            this.textBox2.Location = new System.Drawing.Point(289, 154);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 22);
-            this.textBox2.TabIndex = 2;
+            this.textBoxNormalEkle.Location = new System.Drawing.Point(289, 154);
+            this.textBoxNormalEkle.Name = "textBoxNormalEkle";
+            this.textBoxNormalEkle.Size = new System.Drawing.Size(150, 22);
+            this.textBoxNormalEkle.TabIndex = 2;
             // 
             // labelNormalPersonel
             // 
@@ -186,6 +188,7 @@
             this.btnMaasGuncelleYuzde.TabIndex = 2;
             this.btnMaasGuncelleYuzde.Text = "Güncelle";
             this.btnMaasGuncelleYuzde.UseVisualStyleBackColor = true;
+            this.btnMaasGuncelleYuzde.Click += new System.EventHandler(this.btnMaasGuncelleYuzde_Click);
             // 
             // txtYuzdeMaas
             // 
@@ -240,7 +243,7 @@
         private System.Windows.Forms.Button btnNormalCıkar;
         private System.Windows.Forms.Button btnNormalEkle;
         private System.Windows.Forms.Label labelNormalMaas;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxNormalEkle;
         private System.Windows.Forms.Label labelNormalPersonel;
         private System.Windows.Forms.ComboBox comboBoxNormal;
     }
