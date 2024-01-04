@@ -32,10 +32,10 @@ namespace Personel_Takip
 
         }
 
-     
 
 
-       
+
+
         private void ComboBoxYuzdeDoldur() //yuzdeli zamın comboxu
         {
             using (OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.oledb.12.0;Data Source=GirisEkranı.accdb"))
@@ -148,12 +148,14 @@ namespace Personel_Takip
                         string soyad = adSoyad[1];
 
                         int mevcutMaas = MevcutMaas(ad, soyad);
-                        
+
                         int yeniMaas = mevcutMaas + (mevcutMaas * yuzde) / 100;
 
                         UpdateMaas(ad, soyad, yeniMaas);
-
+                        ZamTarihiGuncelle(ad, soyad);
                         MessageBox.Show("Maaş başarıyla güncellendi.");
+
+                      
                     }
                     else
                     {
@@ -211,13 +213,14 @@ namespace Personel_Takip
                     //parametrelere değerler atanır sonra conn açılır ve güncellerr 
                     // try catch kullanılması bu yüzdendir 
                     cmd.Parameters.AddWithValue("@yeniMaas", yeniMaas);
+
                     cmd.Parameters.AddWithValue("@ad", ad);
                     cmd.Parameters.AddWithValue("@soyad", soyad);
 
                     try
                     {
                         conn.Open();
-                        cmd.ExecuteNonQuery(); 
+                        cmd.ExecuteNonQuery();
                     }
                     catch (Exception ex)
                     {
@@ -245,7 +248,7 @@ namespace Personel_Takip
                         int yeniMaas = mevcutMaas + eklenecekMiktar;
 
                         UpdateMaas(ad, soyad, yeniMaas);
-
+                        ZamTarihiGuncelle(ad, soyad);
                         MessageBox.Show("Maaş başarıyla güncellendi.");
                     }
                     else
@@ -300,5 +303,37 @@ namespace Personel_Takip
                 MessageBox.Show("Hata Oluştu: " + ex.Message);
             }
         }
+        private void ZamTarihiGuncelle(string ad, string soyad) //zam tarihi güncelleme fonksyonu
+        {
+            using (OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.oledb.12.0;Data Source=GirisEkranı.accdb"))
+            {
+                using (OleDbCommand cmd = new OleDbCommand("UPDATE personel SET p_zamtarihi = @zamtarihi WHERE p_ad = @ad AND p_soyad = @soyad",conn))
+                {
+                    DateTime tarih = DateTime.Now;
+                    string yazısekli = tarih.ToString("dd/MM/yyyy");
+                    string zamtarih = yazısekli;
+
+                    cmd.Parameters.AddWithValue("@zamtarihi",zamtarih);
+                    cmd.Parameters.AddWithValue("@ad",ad);
+                    cmd.Parameters.AddWithValue("@soyad",soyad);
+                    // burada try catch ile veritabanı işlemleri
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+
+                    }catch(Exception ex)
+                    {
+                        MessageBox.Show("Hata oluştu: " + ex.Message);
+                    }  
+                    
+
+                }
+            
+            
+            
+            
+            }
+        } 
     }
 }

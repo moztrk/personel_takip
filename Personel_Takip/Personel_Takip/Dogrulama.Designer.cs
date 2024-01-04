@@ -46,13 +46,12 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(87, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(282, 28);
+            this.label2.Size = new System.Drawing.Size(354, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "TC kimlik numaranızı giriniz:";
             // 
@@ -69,7 +68,8 @@
             // 
             // tkimlik
             // 
-            this.tkimlik.Location = new System.Drawing.Point(418, 101);
+            this.tkimlik.Location = new System.Drawing.Point(465, 98);
+            this.tkimlik.MaxLength = 11;
             this.tkimlik.Name = "tkimlik";
             this.tkimlik.Size = new System.Drawing.Size(188, 22);
             this.tkimlik.TabIndex = 3;
@@ -78,9 +78,9 @@
             // 
             this.giriseDnButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.giriseDnButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.giriseDnButton.Location = new System.Drawing.Point(311, 330);
+            this.giriseDnButton.Location = new System.Drawing.Point(311, 317);
             this.giriseDnButton.Name = "giriseDnButton";
-            this.giriseDnButton.Size = new System.Drawing.Size(170, 65);
+            this.giriseDnButton.Size = new System.Drawing.Size(170, 78);
             this.giriseDnButton.TabIndex = 4;
             this.giriseDnButton.Text = "Giriş ekranına dön";
             this.giriseDnButton.UseVisualStyleBackColor = true;

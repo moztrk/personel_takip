@@ -73,7 +73,7 @@ namespace Personel_Takip
                 string soyad = txtSoyad.Text;
                 string tc = txtTc.Text;
                 string maas = txtMaas.Text;
-                DateTime now = DateTime.Now;
+                DateTime now = DateTime.Now;// eklenecek olan personelin işe başladığı gün
                 string formattedDate = now.ToString("dd/MM/yyyy");
                 string girisTarihi = formattedDate;
 
@@ -99,7 +99,7 @@ namespace Personel_Takip
                                    "VALUES (@ad, @soyad, @maas, @girisTarihi, @tc)";
                     cmd.Parameters.AddWithValue("@ad", ad);
                     cmd.Parameters.AddWithValue("@soyad", soyad);
-                    cmd.Parameters.AddWithValue("@maas", maas);
+                    cmd.Parameters.AddWithValue("@maas", maas); // parametre atama
                     cmd.Parameters.AddWithValue("@girisTarihi", girisTarihi);
                     cmd.Parameters.AddWithValue("@tc", tc);
                     cmd.CommandText = query;

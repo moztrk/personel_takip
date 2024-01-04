@@ -49,16 +49,16 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(64, 71);
+            this.dataGridView1.Location = new System.Drawing.Point(154, 39);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(922, 358);
+            this.dataGridView1.Size = new System.Drawing.Size(1042, 340);
             this.dataGridView1.TabIndex = 1;
             // 
             // listelebtn
             // 
-            this.listelebtn.Location = new System.Drawing.Point(443, 470);
+            this.listelebtn.Location = new System.Drawing.Point(607, 470);
             this.listelebtn.Name = "listelebtn";
             this.listelebtn.Size = new System.Drawing.Size(154, 38);
             this.listelebtn.TabIndex = 2;
@@ -71,7 +71,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Personel_Takip.Properties.Resources._374296;
-            this.ClientSize = new System.Drawing.Size(1087, 549);
+            this.ClientSize = new System.Drawing.Size(1326, 549);
             this.Controls.Add(this.listelebtn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menüyeDon);

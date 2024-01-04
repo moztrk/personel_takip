@@ -31,7 +31,7 @@ namespace Personel_Takip
         }
 
        
-        void Listele()
+        void Listele() // bu fonksyon hem buttonda hemde load kısmında kullanılması için
         {
             conn = new OleDbConnection("Provider=Microsoft.ACE.oledb.12.0;Data Source=GirisEkranı.accdb");
             cmd = new OleDbCommand();
@@ -58,6 +58,8 @@ namespace Personel_Takip
             dataGridView1.Columns["p_maas"].HeaderText = "Maaş";
             dataGridView1.Columns["p_isegiris"].HeaderText = "İşe Giriş Tarihi";
             dataGridView1.Columns["p_kimlik"].HeaderText = "TC Kimlik Numarası";
+            dataGridView1.Columns["p_zamtarihi"].HeaderText = "Son Zam Tarihi";
+            dataGridView1.Columns["p_prim"].HeaderText = "Güncel Prim";
         }
 
        

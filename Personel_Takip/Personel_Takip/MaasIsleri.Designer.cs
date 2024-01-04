@@ -64,24 +64,26 @@
             // 
             // btnNormalCıkar
             // 
+            this.btnNormalCıkar.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnNormalCıkar.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnNormalCıkar.Location = new System.Drawing.Point(236, 285);
             this.btnNormalCıkar.Name = "btnNormalCıkar";
             this.btnNormalCıkar.Size = new System.Drawing.Size(174, 85);
             this.btnNormalCıkar.TabIndex = 5;
             this.btnNormalCıkar.Text = "Net Maaşdan Düş";
-            this.btnNormalCıkar.UseVisualStyleBackColor = true;
+            this.btnNormalCıkar.UseVisualStyleBackColor = false;
             this.btnNormalCıkar.Click += new System.EventHandler(this.btnNormalCıkar_Click);
             // 
             // btnNormalEkle
             // 
+            this.btnNormalEkle.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnNormalEkle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnNormalEkle.Location = new System.Drawing.Point(37, 285);
             this.btnNormalEkle.Name = "btnNormalEkle";
             this.btnNormalEkle.Size = new System.Drawing.Size(152, 85);
             this.btnNormalEkle.TabIndex = 4;
             this.btnNormalEkle.Text = "Net Maaşa Ekle";
-            this.btnNormalEkle.UseVisualStyleBackColor = true;
+            this.btnNormalEkle.UseVisualStyleBackColor = false;
             this.btnNormalEkle.Click += new System.EventHandler(this.btnNormalEkle_Click);
             // 
             // labelNormalMaas
@@ -181,13 +183,14 @@
             // 
             // btnMaasGuncelleYuzde
             // 
+            this.btnMaasGuncelleYuzde.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnMaasGuncelleYuzde.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMaasGuncelleYuzde.Location = new System.Drawing.Point(122, 285);
             this.btnMaasGuncelleYuzde.Name = "btnMaasGuncelleYuzde";
             this.btnMaasGuncelleYuzde.Size = new System.Drawing.Size(189, 54);
             this.btnMaasGuncelleYuzde.TabIndex = 2;
             this.btnMaasGuncelleYuzde.Text = "Güncelle";
-            this.btnMaasGuncelleYuzde.UseVisualStyleBackColor = true;
+            this.btnMaasGuncelleYuzde.UseVisualStyleBackColor = false;
             this.btnMaasGuncelleYuzde.Click += new System.EventHandler(this.btnMaasGuncelleYuzde_Click);
             // 
             // txtYuzdeMaas

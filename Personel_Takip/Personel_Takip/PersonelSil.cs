@@ -102,9 +102,9 @@ namespace Personel_Takip
                             cmd.ExecuteNonQuery();
                         }
 
-                    
-                        Listele();
                         UpdateProgressBar();//barı yenileme
+                        Listele();
+                       
 
 
                         MessageBox.Show("Personel başarıyla silindi.");
