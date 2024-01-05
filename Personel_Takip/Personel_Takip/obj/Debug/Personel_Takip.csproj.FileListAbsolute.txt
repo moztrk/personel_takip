@@ -19,3 +19,4 @@ C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_T
 C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.PersonelSil.resources
 C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.MaasDuzenle.resources
 C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.MaasIsleri.resources
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.MesaiIsleri.resources

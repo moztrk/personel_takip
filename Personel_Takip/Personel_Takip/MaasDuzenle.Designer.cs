@@ -69,6 +69,7 @@
             this.MbtnMesai.TabIndex = 1;
             this.MbtnMesai.Text = "Mesai Hesapla";
             this.MbtnMesai.UseVisualStyleBackColor = true;
+            this.MbtnMesai.Click += new System.EventHandler(this.MbtnMesai_Click);
             // 
             // mbtnMaas
             // 

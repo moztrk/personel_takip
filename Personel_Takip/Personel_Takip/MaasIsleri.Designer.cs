@@ -115,6 +115,7 @@
             // 
             // comboBoxNormal
             // 
+            this.comboBoxNormal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNormal.FormattingEnabled = true;
             this.comboBoxNormal.Location = new System.Drawing.Point(289, 84);
             this.comboBoxNormal.Name = "comboBoxNormal";
@@ -202,6 +203,7 @@
             // 
             // comboBoxYuzde
             // 
+            this.comboBoxYuzde.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxYuzde.FormattingEnabled = true;
             this.comboBoxYuzde.Location = new System.Drawing.Point(281, 72);
             this.comboBoxYuzde.Name = "comboBoxYuzde";

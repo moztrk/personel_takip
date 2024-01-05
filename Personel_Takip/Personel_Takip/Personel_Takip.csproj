@@ -104,6 +104,12 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MesaiIsleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MesaiIsleri.Designer.cs">
+      <DependentUpon>MesaiIsleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonelListesi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MesaiIsleri.resx">
+      <DependentUpon>MesaiIsleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelListesi.resx">
       <DependentUpon>PersonelListesi.cs</DependentUpon>

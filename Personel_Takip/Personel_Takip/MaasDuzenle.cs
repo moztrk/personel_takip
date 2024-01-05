@@ -37,5 +37,15 @@ namespace Personel_Takip
             f2.Show();
 
         }
+
+        private void MbtnMesai_Click(object sender, EventArgs e)
+        {
+            panelFormAcma.Controls.Clear();
+            MesaiIsleri f = new MesaiIsleri();
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            panelFormAcma.Controls.Add(f);
+            f.Show();
+        }
     }
 }

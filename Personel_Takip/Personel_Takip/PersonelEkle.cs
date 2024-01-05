@@ -39,6 +39,7 @@ namespace Personel_Takip
             dataGridView1.Columns["p_maas"].HeaderText = "Maaş";
             dataGridView1.Columns["p_isegiris"].HeaderText = "İşe Giriş Tarihi";
             dataGridView1.Columns["p_kimlik"].HeaderText = "TC Kimlik Numarası";
+            dataGridView1.Columns["p_primyenilemetarihi"].HeaderText = "Prim Güncellme Tarihi";
         }
 
         void Listele()

@@ -60,6 +60,7 @@ namespace Personel_Takip
             dataGridView1.Columns["p_kimlik"].HeaderText = "TC Kimlik Numarası";
             dataGridView1.Columns["p_zamtarihi"].HeaderText = "Son Zam Tarihi";
             dataGridView1.Columns["p_prim"].HeaderText = "Güncel Prim";
+            dataGridView1.Columns["p_primyenilemetarihi"].HeaderText = "Prim Güncellme Tarihi";
         }
 
        
