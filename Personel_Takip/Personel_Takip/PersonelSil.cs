@@ -14,7 +14,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace Personel_Takip
 {
     public partial class PersonelSil : Form
+
     {
+        private OleDbConnection connection;
         private const int MaxPersonelSayisi = 20; // Max personel için
 
         private int kalanEklemeHakki;
@@ -37,6 +39,12 @@ namespace Personel_Takip
             dataGridView1.Columns["p_maas"].HeaderText = "Maaş";
             dataGridView1.Columns["p_isegiris"].HeaderText = "İşe Giriş Tarihi";
             dataGridView1.Columns["p_kimlik"].HeaderText = "TC Kimlik Numarası";
+            dataGridView1.Columns["p_zamtarihi"].HeaderText = "Son Zam Tarihi";
+            dataGridView1.Columns["p_prim"].HeaderText = "Güncel Prim";
+            dataGridView1.Columns["p_primyenilemetarihi"].HeaderText = "Prim Güncellme Tarihi";
+            dataGridView1.Columns["p_kalanizinhakkı"].HeaderText = "Kalan Yıllık İzin Hakkı";
+            dataGridView1.Columns["p_departman"].HeaderText = "Departman";
+
         }
 
         void Listele()
@@ -93,15 +101,21 @@ namespace Personel_Takip
                         // Silme işlemi 
                         string query = "DELETE FROM personel WHERE p_no = @personelNo";
 
-                        
                         using (OleDbConnection connection = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=GirisEkranı.accdb"))
-                        using (OleDbCommand cmd = new OleDbCommand(query, connection))
                         {
                             connection.Open();
-                            cmd.Parameters.AddWithValue("@personelNo", personelNo);
-                            cmd.ExecuteNonQuery();
+
+                            using (OleDbCommand cmd = new OleDbCommand(query, connection))
+                            {
+                                cmd.Parameters.AddWithValue("@personelNo", personelNo);
+                                cmd.ExecuteNonQuery();
+                            }
+
                         }
 
+
+
+                       
                         UpdateProgressBar();//barı yenileme
                         Listele();
                        
@@ -113,7 +127,8 @@ namespace Personel_Takip
                     {
                         MessageBox.Show("Bir hata oluştu: " + ex.Message);
                     }
-                }
+                    
+                    }
             }
             else
             {

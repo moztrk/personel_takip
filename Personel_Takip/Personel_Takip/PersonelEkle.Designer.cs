@@ -43,6 +43,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.ekleProgressBar = new System.Windows.Forms.ProgressBar();
             this.labelDolulukOrani = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBoxDepartman = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,7 +94,7 @@
             // 
             // txtAd
             // 
-            this.txtAd.Location = new System.Drawing.Point(158, 111);
+            this.txtAd.Location = new System.Drawing.Point(185, 111);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(100, 22);
             this.txtAd.TabIndex = 5;
@@ -100,7 +102,7 @@
             // 
             // txtSoyad
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(158, 154);
+            this.txtSoyad.Location = new System.Drawing.Point(185, 154);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(100, 22);
             this.txtSoyad.TabIndex = 6;
@@ -108,7 +110,7 @@
             // 
             // txtTc
             // 
-            this.txtTc.Location = new System.Drawing.Point(158, 195);
+            this.txtTc.Location = new System.Drawing.Point(185, 195);
             this.txtTc.MaxLength = 11;
             this.txtTc.Name = "txtTc";
             this.txtTc.Size = new System.Drawing.Size(100, 22);
@@ -118,7 +120,7 @@
             // 
             // txtMaas
             // 
-            this.txtMaas.Location = new System.Drawing.Point(158, 234);
+            this.txtMaas.Location = new System.Drawing.Point(185, 240);
             this.txtMaas.Name = "txtMaas";
             this.txtMaas.Size = new System.Drawing.Size(100, 22);
             this.txtMaas.TabIndex = 9;
@@ -128,7 +130,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(45, 344);
+            this.button1.Location = new System.Drawing.Point(45, 387);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 40);
             this.button1.TabIndex = 10;
@@ -149,7 +151,7 @@
             // buttonListe
             // 
             this.buttonListe.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.buttonListe.Location = new System.Drawing.Point(45, 412);
+            this.buttonListe.Location = new System.Drawing.Point(45, 456);
             this.buttonListe.Name = "buttonListe";
             this.buttonListe.Size = new System.Drawing.Size(155, 40);
             this.buttonListe.TabIndex = 12;
@@ -185,12 +187,34 @@
             this.labelDolulukOrani.TabIndex = 15;
             this.labelDolulukOrani.Text = "\r\n";
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(3, 269);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(149, 23);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Departman:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // comboBoxDepartman
+            // 
+            this.comboBoxDepartman.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDepartman.FormattingEnabled = true;
+            this.comboBoxDepartman.Location = new System.Drawing.Point(185, 268);
+            this.comboBoxDepartman.Name = "comboBoxDepartman";
+            this.comboBoxDepartman.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxDepartman.TabIndex = 18;
+            // 
             // PersonelEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Personel_Takip.Properties.Resources._374296;
             this.ClientSize = new System.Drawing.Size(1181, 523);
+            this.Controls.Add(this.comboBoxDepartman);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.labelDolulukOrani);
             this.Controls.Add(this.ekleProgressBar);
             this.Controls.Add(this.button2);
@@ -232,5 +256,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ProgressBar ekleProgressBar;
         private System.Windows.Forms.Label labelDolulukOrani;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBoxDepartman;
     }
 }

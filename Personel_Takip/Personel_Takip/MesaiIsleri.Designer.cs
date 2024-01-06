@@ -31,15 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MesaiIsleri));
             this.tabControlM = new System.Windows.Forms.TabControl();
             this.tabPageEkle = new System.Windows.Forms.TabPage();
+            this.btnSıfırlama = new System.Windows.Forms.Button();
             this.btnMekle = new System.Windows.Forms.Button();
             this.comboBoxMsaati = new System.Windows.Forms.ComboBox();
             this.labelSaat = new System.Windows.Forms.Label();
             this.comboBoxMesai = new System.Windows.Forms.ComboBox();
             this.labelMesai = new System.Windows.Forms.Label();
             this.tabPageMesaiBilgi = new System.Windows.Forms.TabPage();
-            this.btnSıfırlama = new System.Windows.Forms.Button();
+            this.btnMbilgiGuncelle = new System.Windows.Forms.Button();
+            this.lblMsaatiGuncelle = new System.Windows.Forms.Label();
+            this.txtSaatUcretiM = new System.Windows.Forms.TextBox();
+            this.labelBilgi = new System.Windows.Forms.Label();
+            this.buttonGoster = new System.Windows.Forms.Button();
             this.tabControlM.SuspendLayout();
             this.tabPageEkle.SuspendLayout();
+            this.tabPageMesaiBilgi.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlM
@@ -70,14 +76,26 @@
             this.tabPageEkle.TabIndex = 0;
             this.tabPageEkle.Text = "Mesai Ekle";
             // 
+            // btnSıfırlama
+            // 
+            this.btnSıfırlama.BackColor = System.Drawing.Color.Gold;
+            this.btnSıfırlama.Location = new System.Drawing.Point(10, 342);
+            this.btnSıfırlama.Name = "btnSıfırlama";
+            this.btnSıfırlama.Size = new System.Drawing.Size(351, 50);
+            this.btnSıfırlama.TabIndex = 5;
+            this.btnSıfırlama.Text = "Primleri bu ay için sıfırla";
+            this.btnSıfırlama.UseVisualStyleBackColor = false;
+            this.btnSıfırlama.Click += new System.EventHandler(this.btnSıfırlama_Click);
+            // 
             // btnMekle
             // 
+            this.btnMekle.BackColor = System.Drawing.Color.Gold;
             this.btnMekle.Location = new System.Drawing.Point(10, 222);
             this.btnMekle.Name = "btnMekle";
             this.btnMekle.Size = new System.Drawing.Size(138, 47);
             this.btnMekle.TabIndex = 4;
             this.btnMekle.Text = "Prim Ekle";
-            this.btnMekle.UseVisualStyleBackColor = true;
+            this.btnMekle.UseVisualStyleBackColor = false;
             this.btnMekle.Click += new System.EventHandler(this.btnMekle_Click);
             // 
             // comboBoxMsaati
@@ -117,6 +135,11 @@
             // tabPageMesaiBilgi
             // 
             this.tabPageMesaiBilgi.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.tabPageMesaiBilgi.Controls.Add(this.buttonGoster);
+            this.tabPageMesaiBilgi.Controls.Add(this.labelBilgi);
+            this.tabPageMesaiBilgi.Controls.Add(this.txtSaatUcretiM);
+            this.tabPageMesaiBilgi.Controls.Add(this.lblMsaatiGuncelle);
+            this.tabPageMesaiBilgi.Controls.Add(this.btnMbilgiGuncelle);
             this.tabPageMesaiBilgi.Location = new System.Drawing.Point(4, 25);
             this.tabPageMesaiBilgi.Name = "tabPageMesaiBilgi";
             this.tabPageMesaiBilgi.Padding = new System.Windows.Forms.Padding(3);
@@ -124,16 +147,55 @@
             this.tabPageMesaiBilgi.TabIndex = 1;
             this.tabPageMesaiBilgi.Text = "Mesai Bilgileri Güncelle";
             // 
-            // btnSıfırlama
+            // btnMbilgiGuncelle
             // 
-            this.btnSıfırlama.BackColor = System.Drawing.Color.Gold;
-            this.btnSıfırlama.Location = new System.Drawing.Point(10, 342);
-            this.btnSıfırlama.Name = "btnSıfırlama";
-            this.btnSıfırlama.Size = new System.Drawing.Size(351, 50);
-            this.btnSıfırlama.TabIndex = 5;
-            this.btnSıfırlama.Text = "Primleri bu ay için sıfırla";
-            this.btnSıfırlama.UseVisualStyleBackColor = false;
-            this.btnSıfırlama.Click += new System.EventHandler(this.btnSıfırlama_Click);
+            this.btnMbilgiGuncelle.BackColor = System.Drawing.Color.Gold;
+            this.btnMbilgiGuncelle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnMbilgiGuncelle.Location = new System.Drawing.Point(94, 178);
+            this.btnMbilgiGuncelle.Name = "btnMbilgiGuncelle";
+            this.btnMbilgiGuncelle.Size = new System.Drawing.Size(342, 55);
+            this.btnMbilgiGuncelle.TabIndex = 0;
+            this.btnMbilgiGuncelle.Text = "Mesai Bilgisini Güncelle";
+            this.btnMbilgiGuncelle.UseVisualStyleBackColor = false;
+            this.btnMbilgiGuncelle.Click += new System.EventHandler(this.btnMbilgiGuncelle_Click);
+            // 
+            // lblMsaatiGuncelle
+            // 
+            this.lblMsaatiGuncelle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMsaatiGuncelle.Location = new System.Drawing.Point(44, 47);
+            this.lblMsaatiGuncelle.Name = "lblMsaatiGuncelle";
+            this.lblMsaatiGuncelle.Size = new System.Drawing.Size(294, 47);
+            this.lblMsaatiGuncelle.TabIndex = 1;
+            this.lblMsaatiGuncelle.Text = "Mesai Saat Ücreti Giriniz:";
+            this.lblMsaatiGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtSaatUcretiM
+            // 
+            this.txtSaatUcretiM.Location = new System.Drawing.Point(384, 61);
+            this.txtSaatUcretiM.Name = "txtSaatUcretiM";
+            this.txtSaatUcretiM.Size = new System.Drawing.Size(100, 22);
+            this.txtSaatUcretiM.TabIndex = 2;
+            // 
+            // labelBilgi
+            // 
+            this.labelBilgi.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelBilgi.Location = new System.Drawing.Point(681, 67);
+            this.labelBilgi.Name = "labelBilgi";
+            this.labelBilgi.Size = new System.Drawing.Size(453, 150);
+            this.labelBilgi.TabIndex = 3;
+            this.labelBilgi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonGoster
+            // 
+            this.buttonGoster.BackColor = System.Drawing.Color.Gold;
+            this.buttonGoster.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.buttonGoster.Location = new System.Drawing.Point(685, 338);
+            this.buttonGoster.Name = "buttonGoster";
+            this.buttonGoster.Size = new System.Drawing.Size(348, 62);
+            this.buttonGoster.TabIndex = 4;
+            this.buttonGoster.Text = "Saatlik Ücret Göster";
+            this.buttonGoster.UseVisualStyleBackColor = false;
+            this.buttonGoster.Click += new System.EventHandler(this.buttonGoster_Click);
             // 
             // MesaiIsleri
             // 
@@ -148,6 +210,8 @@
             this.Text = "Mesai İşleri";
             this.tabControlM.ResumeLayout(false);
             this.tabPageEkle.ResumeLayout(false);
+            this.tabPageMesaiBilgi.ResumeLayout(false);
+            this.tabPageMesaiBilgi.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -163,5 +227,10 @@
         private System.Windows.Forms.Button btnMekle;
         private System.Windows.Forms.ComboBox comboBoxMsaati;
         private System.Windows.Forms.Button btnSıfırlama;
+        private System.Windows.Forms.TextBox txtSaatUcretiM;
+        private System.Windows.Forms.Label lblMsaatiGuncelle;
+        private System.Windows.Forms.Button btnMbilgiGuncelle;
+        private System.Windows.Forms.Label labelBilgi;
+        private System.Windows.Forms.Button buttonGoster;
     }
 }

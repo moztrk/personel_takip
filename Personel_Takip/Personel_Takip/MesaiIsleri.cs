@@ -50,7 +50,7 @@ namespace Personel_Takip
         private void ComboBoxMsaatiDoldur()
         {
             // ComboBoxMsaati'yi 1, 2, 3, 4 değerleriyle doldur
-            for (int i = 1; i <= 4; i++)
+            for (int i = 1; i <= 24; i++)
             {
                 comboBoxMsaati.Items.Add(i);
             }
@@ -175,6 +175,82 @@ namespace Personel_Takip
                 MessageBox.Show("Hata Oluştu: " + ex.Message);
             }
 
+        }
+
+        private void btnMbilgiGuncelle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // txtSaatUcretiM'den değeri al
+                double yeniSaatUcreti = Convert.ToDouble(txtSaatUcretiM.Text);
+
+                // UpdateMesaiBilgisi metodunu kullanarak güncelleme yap
+                UpdateMesaiBilgisi(yeniSaatUcreti);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata Oluştu: " + ex.Message);
+            }
+        }
+        private void LabelaYazdırMesaiUcreti()
+        {
+
+            try
+            {
+                using (OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.oledb.12.0;Data Source=GirisEkranı.accdb"))
+                {
+                    using (OleDbCommand cmd = new OleDbCommand("SELECT TOP 1 m_saatlikucret FROM mesai ORDER BY m_degismetarihi DESC", conn))
+                    {
+                        conn.Open();
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            double saatUcreti = Convert.ToDouble(result);
+                            labelBilgi.Text = $"Mesai Saat Ücreti: {saatUcreti:C2}";
+                        }
+                        else
+                        {
+                            labelBilgi.Text = "Mesai saat ücreti bulunamadı.";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata Oluştu: " + ex.Message);
+            }
+
+        }
+        private void UpdateMesaiBilgisi(double yeniSaatUcreti)
+        {
+            try
+            {
+                using (OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.oledb.12.0;Data Source=GirisEkranı.accdb"))
+                {
+                    using (OleDbCommand cmd = new OleDbCommand("UPDATE mesai SET m_saatlikucret = @saatUcreti, m_degismetarihi = @degisimTarihi", conn))
+                    {
+                        DateTime degisimTarihi = DateTime.Now;
+                        string degisimTarihiString = degisimTarihi.ToString("dd/MM/yyyy");
+
+                        cmd.Parameters.AddWithValue("@saatUcreti", yeniSaatUcreti);
+                        cmd.Parameters.AddWithValue("@degisimTarihi", degisimTarihiString);
+
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Mesai bilgileri başarıyla güncellendi.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata Oluştu: " + ex.Message);
+            }
+        }
+
+        private void buttonGoster_Click(object sender, EventArgs e)
+        {
+            LabelaYazdırMesaiUcreti();
         }
     }
 

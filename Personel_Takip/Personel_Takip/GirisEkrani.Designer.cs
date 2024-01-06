@@ -145,13 +145,15 @@
             // 
             // cikisButton
             // 
+            this.cikisButton.BackColor = System.Drawing.Color.Coral;
             this.cikisButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cikisButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cikisButton.Location = new System.Drawing.Point(565, 366);
             this.cikisButton.Name = "cikisButton";
             this.cikisButton.Size = new System.Drawing.Size(94, 45);
             this.cikisButton.TabIndex = 8;
             this.cikisButton.Text = "Çıkış";
-            this.cikisButton.UseVisualStyleBackColor = true;
+            this.cikisButton.UseVisualStyleBackColor = false;
             this.cikisButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // GirisEkrani

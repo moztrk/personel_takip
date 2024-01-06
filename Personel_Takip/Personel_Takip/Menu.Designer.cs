@@ -38,6 +38,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttongirisedon = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDepartman = new System.Windows.Forms.Button();
+            this.btnIzin = new System.Windows.Forms.Button();
+            this.btnHesap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +69,9 @@
             this.ımageList1.Images.SetKeyName(2, "sil.jpeg");
             this.ımageList1.Images.SetKeyName(3, "maaş.png");
             this.ımageList1.Images.SetKeyName(4, "istockphoto-1083025568-612x612.jpg");
+            this.ımageList1.Images.SetKeyName(5, "42497departmentstore_99030.ico");
+            this.ımageList1.Images.SetKeyName(6, "sleep_umbrella_vacation_icon-icons.com_51082.ico");
+            this.ımageList1.Images.SetKeyName(7, "financial_document_calculator_pen_dollar_coin_money_icon_205706.ico");
             // 
             // buttonEkle
             // 
@@ -119,7 +125,7 @@
             this.pictureBox1.BackgroundImage = global::Personel_Takip.Properties.Resources._374296;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::Personel_Takip.Properties.Resources.istockphoto_1083025568_612x612;
-            this.pictureBox1.Location = new System.Drawing.Point(627, 156);
+            this.pictureBox1.Location = new System.Drawing.Point(857, 133);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(173, 151);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -129,7 +135,7 @@
             // buttongirisedon
             // 
             this.buttongirisedon.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.buttongirisedon.Location = new System.Drawing.Point(627, 399);
+            this.buttongirisedon.Location = new System.Drawing.Point(866, 390);
             this.buttongirisedon.Name = "buttongirisedon";
             this.buttongirisedon.Size = new System.Drawing.Size(182, 40);
             this.buttongirisedon.TabIndex = 6;
@@ -141,12 +147,55 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(647, 80);
+            this.label1.Location = new System.Drawing.Point(486, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 32);
             this.label1.TabIndex = 7;
             this.label1.Text = "Menü";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnDepartman
+            // 
+            this.btnDepartman.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDepartman.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDepartman.ImageKey = "42497departmentstore_99030.ico";
+            this.btnDepartman.ImageList = this.ımageList1;
+            this.btnDepartman.Location = new System.Drawing.Point(429, 138);
+            this.btnDepartman.Name = "btnDepartman";
+            this.btnDepartman.Size = new System.Drawing.Size(228, 57);
+            this.btnDepartman.TabIndex = 8;
+            this.btnDepartman.Text = "Departman İşleri";
+            this.btnDepartman.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDepartman.UseVisualStyleBackColor = true;
+            this.btnDepartman.Click += new System.EventHandler(this.btnDepartman_Click);
+            // 
+            // btnIzin
+            // 
+            this.btnIzin.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnIzin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIzin.ImageKey = "sleep_umbrella_vacation_icon-icons.com_51082.ico";
+            this.btnIzin.ImageList = this.ımageList1;
+            this.btnIzin.Location = new System.Drawing.Point(429, 55);
+            this.btnIzin.Name = "btnIzin";
+            this.btnIzin.Size = new System.Drawing.Size(228, 62);
+            this.btnIzin.TabIndex = 9;
+            this.btnIzin.Text = "İzin İşlemleri";
+            this.btnIzin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnIzin.UseVisualStyleBackColor = true;
+            // 
+            // btnHesap
+            // 
+            this.btnHesap.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnHesap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHesap.ImageKey = "financial_document_calculator_pen_dollar_coin_money_icon_205706.ico";
+            this.btnHesap.ImageList = this.ımageList1;
+            this.btnHesap.Location = new System.Drawing.Point(429, 213);
+            this.btnHesap.Name = "btnHesap";
+            this.btnHesap.Size = new System.Drawing.Size(228, 62);
+            this.btnHesap.TabIndex = 10;
+            this.btnHesap.Text = "İşletme Hesapları";
+            this.btnHesap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHesap.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 
@@ -154,7 +203,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Personel_Takip.Properties.Resources._374296;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(908, 493);
+            this.ClientSize = new System.Drawing.Size(1144, 493);
+            this.Controls.Add(this.btnHesap);
+            this.Controls.Add(this.btnIzin);
+            this.Controls.Add(this.btnDepartman);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttongirisedon);
             this.Controls.Add(this.pictureBox1);
@@ -183,5 +235,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttongirisedon;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDepartman;
+        private System.Windows.Forms.Button btnIzin;
+        private System.Windows.Forms.Button btnHesap;
     }
 }

@@ -64,7 +64,7 @@
             // 
             // btnNormalCıkar
             // 
-            this.btnNormalCıkar.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnNormalCıkar.BackColor = System.Drawing.Color.Gold;
             this.btnNormalCıkar.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnNormalCıkar.Location = new System.Drawing.Point(236, 285);
             this.btnNormalCıkar.Name = "btnNormalCıkar";
@@ -76,7 +76,7 @@
             // 
             // btnNormalEkle
             // 
-            this.btnNormalEkle.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnNormalEkle.BackColor = System.Drawing.Color.Gold;
             this.btnNormalEkle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnNormalEkle.Location = new System.Drawing.Point(37, 285);
             this.btnNormalEkle.Name = "btnNormalEkle";
@@ -184,7 +184,7 @@
             // 
             // btnMaasGuncelleYuzde
             // 
-            this.btnMaasGuncelleYuzde.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnMaasGuncelleYuzde.BackColor = System.Drawing.Color.Gold;
             this.btnMaasGuncelleYuzde.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMaasGuncelleYuzde.Location = new System.Drawing.Point(122, 285);
             this.btnMaasGuncelleYuzde.Name = "btnMaasGuncelleYuzde";
@@ -225,6 +225,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MaasIsleri";
             this.Text = "Maaş Güncelleme";
+    
             this.panelNormal.ResumeLayout(false);
             this.panelNormal.PerformLayout();
             this.panelYuzde.ResumeLayout(false);

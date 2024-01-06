@@ -13,7 +13,8 @@ namespace Personel_Takip
 {
     public partial class PersonelEkle : Form
     {
-        private const int MaxPersonelSayisi = 20;
+        public static int MaxPersonelSayisi { get; set; } = 20; // departman için get set
+        
         private int kalanEklemeHakki;
 
         public PersonelEkle()
@@ -39,7 +40,20 @@ namespace Personel_Takip
             dataGridView1.Columns["p_maas"].HeaderText = "Maaş";
             dataGridView1.Columns["p_isegiris"].HeaderText = "İşe Giriş Tarihi";
             dataGridView1.Columns["p_kimlik"].HeaderText = "TC Kimlik Numarası";
+            dataGridView1.Columns["p_zamtarihi"].HeaderText = "Son Zam Tarihi";
+            dataGridView1.Columns["p_prim"].HeaderText = "Güncel Prim";
             dataGridView1.Columns["p_primyenilemetarihi"].HeaderText = "Prim Güncellme Tarihi";
+            dataGridView1.Columns["p_kalanizinhakkı"].HeaderText = "Kalan Yıllık İzin Hakkı";
+            dataGridView1.Columns["p_departman"].HeaderText = "Departman";
+
+
+
+            comboBoxDepartman.Items.Add("Yonetim");
+            comboBoxDepartman.Items.Add("Muhasebe"); 
+            comboBoxDepartman.Items.Add("Sekreterlik");
+            comboBoxDepartman.Items.Add("Pazarlama");
+            comboBoxDepartman.Items.Add("Uretim");
+            comboBoxDepartman.Items.Add("Lojistik");
         }
 
         void Listele()
@@ -70,43 +84,50 @@ namespace Personel_Takip
         {
             try
             {
-                string ad = txtAd.Text;
-                string soyad = txtSoyad.Text;
-                string tc = txtTc.Text;
-                string maas = txtMaas.Text;
-                DateTime now = DateTime.Now;// eklenecek olan personelin işe başladığı gün
-                string formattedDate = now.ToString("dd/MM/yyyy");
-                string girisTarihi = formattedDate;
+                
+                    string ad = txtAd.Text;
+                    string soyad = txtSoyad.Text;
+                    string tc = txtTc.Text;
+                    string maas = txtMaas.Text;
+                    string departman = comboBoxDepartman.SelectedItem?.ToString();
 
-                int mevcutPersonelSayisi = MevcutPersonelSayisi();
+                    DateTime now = DateTime.Now;// eklenecek olan personelin işe başladığı gün
+                    string formattedDate = now.ToString("dd/MM/yyyy");
+                    string girisTarihi = formattedDate;
 
-                if (mevcutPersonelSayisi >= MaxPersonelSayisi)
-                {
-                    MessageBox.Show("Personel eklenemez, maksimum personel sayısına ulaşıldı.");
-                    return;
-                }
+                    int mevcutPersonelSayisi = MevcutPersonelSayisi();
 
-                if (ad == "" || soyad == "" || tc == "" || maas == "")
-                {
-                    MessageBox.Show("Lütfen tüm bilgileri girin.");
-                }
-                else
-                {
-                    conn = new OleDbConnection("Provider=Microsoft.ACE.oledb.12.0;Data Source=GirisEkranı.accdb");
+                    if (mevcutPersonelSayisi >= MaxPersonelSayisi)
+                    {
+                        MessageBox.Show("Personel eklenemez, maksimum personel sayısına ulaşıldı.");
+                        return;
+                    }
+
+                    if (ad == "" || soyad == "" || tc == "" || maas == "" || departman == null)
+                    {
+                        MessageBox.Show("Lütfen tüm bilgileri girin ve bir departman seçin.");
+                    }
+                    else
+                    {
+                    conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDb.12.0;Data Source=GirisEkranı.accdb");
                     cmd = new OleDbCommand();
                     conn.Open();
                     cmd.Connection = conn;
-                    string query = "INSERT INTO personel (p_ad, p_soyad, p_maas, p_isegiris, p_kimlik) " +
-                                   "VALUES (@ad, @soyad, @maas, @girisTarihi, @tc)";
+                    string query = "INSERT INTO personel (p_ad, p_soyad, p_maas, p_isegiris, p_kimlik, p_departman) " +
+                                      "VALUES (@ad, @soyad, @maas, @girisTarihi, @tc, @departman)";
+
                     cmd.Parameters.AddWithValue("@ad", ad);
                     cmd.Parameters.AddWithValue("@soyad", soyad);
-                    cmd.Parameters.AddWithValue("@maas", maas); // parametre atama
+                    cmd.Parameters.AddWithValue("@maas", maas);
                     cmd.Parameters.AddWithValue("@girisTarihi", girisTarihi);
                     cmd.Parameters.AddWithValue("@tc", tc);
+                    cmd.Parameters.AddWithValue("@departman", departman);
                     cmd.CommandText = query;
-                    cmd.ExecuteNonQuery();
+                        cmd.ExecuteNonQuery();
 
-                    kalanEklemeHakki = MaxPersonelSayisi - mevcutPersonelSayisi;
+
+
+                        kalanEklemeHakki = MaxPersonelSayisi - mevcutPersonelSayisi;
                     UpdateProgressBar();
                     MessageBox.Show($"Personel başarıyla eklendi. Kalan personel ekleme hakkınız: {--kalanEklemeHakki}");
                     Listele();
@@ -205,5 +226,7 @@ namespace Personel_Takip
                 txtMaas.Text = string.Empty;
             }
         }
+
+      
     }
 }

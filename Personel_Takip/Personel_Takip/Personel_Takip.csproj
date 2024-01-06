@@ -74,6 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DepartmanIsleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmanIsleri.Designer.cs">
+      <DependentUpon>DepartmanIsleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dogrulama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DepartmanIsleri.resx">
+      <DependentUpon>DepartmanIsleri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dogrulama.resx">
       <DependentUpon>Dogrulama.cs</DependentUpon>
     </EmbeddedResource>

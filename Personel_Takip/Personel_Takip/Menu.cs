@@ -75,5 +75,12 @@ namespace Personel_Takip
             f1.Show();
             this.Hide();
         }
+
+        private void btnDepartman_Click(object sender, EventArgs e)
+        {
+            DepartmanIsleri f4= new DepartmanIsleri();
+            f4.Show();
+            this.Hide();
+        }
     }
 }
