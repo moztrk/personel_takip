@@ -17,79 +17,15 @@ namespace Personel_Takip
         public DepartmanIsleri()
         {
             InitializeComponent();
-            panelYonetim.Visible = false;
-            panelYonetimMaas.Visible = false;
-            panelMuhasebe.Visible = false;
-            panelSekreterlik.Visible = false;
-            panelPazarlama.Visible = false;
-            panelUretim.Visible = false;
-            panelLojistik.Visible = false;
+            
            
         }
 
-        private void btnYmenu_Click(object sender, EventArgs e)
-        {
-            MenuDon();
-        }
-        private void MenuDon()
+        private void btnMenu_Click(object sender, EventArgs e)
         {
             Menu f1 = new Menu();
-            f1.Show();
+            f1.Show();  
             this.Hide();
         }
-
-        private void btnMmenu_Click(object sender, EventArgs e)
-        {
-            MenuDon();
-        }
-
-        private void btnSmenu_Click(object sender, EventArgs e)
-        {
-            MenuDon();
-        }
-
-        private void btnPmenu_Click(object sender, EventArgs e)
-        {
-            MenuDon();
-        }
-
-        private void btnUmenu_Click(object sender, EventArgs e)
-        {
-            MenuDon();
-        }
-
-        private void btnLmenu_Click(object sender, EventArgs e)
-        {
-            MenuDon();
-        }
-
-        private void DepartmanIsleri_Load(object sender, EventArgs e)
-        {
-        
-        }
-
-        private void btnKapasite_Click(object sender, EventArgs e)
-        {
-           
-
-
-        }
-       
-
-      
-
-        private void btnYkapasitearttır_Click(object sender, EventArgs e)
-        {
-           
-
-
-        }
-
-        private void btnYkapasiteDusur_Click(object sender, EventArgs e)
-        { 
-        
-        
-        }
-           
     }
 }

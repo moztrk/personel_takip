@@ -89,5 +89,15 @@ namespace Personel_Takip.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_fauxels_3183148 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-fauxels-3183148", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

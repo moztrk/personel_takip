@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Personel_Takip.exe.manifest" size="3493">
+    <dependentAssembly dependencyType="install" codebase="Personel_Takip.exe.manifest" size="3494">
       <assemblyIdentity name="Personel_Takip.exe" version="1.0.0.6" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lDzv4m8uQooxawXI+AczSRbMIJL/wA3JnKWY5BEhIWo=</dsig:DigestValue>
+        <dsig:DigestValue>763hT5y6WI25PYo8HmByTdaJh64/Vr+VROrcRVnSyaU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

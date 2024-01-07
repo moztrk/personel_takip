@@ -18,6 +18,7 @@ namespace Personel_Takip
             InitializeComponent();
             ComboBoxMesaiDoldur();
             ComboBoxMsaatiDoldur();
+            pMesai.Visible = false;
         }
        
         private void ComboBoxMesaiDoldur()
@@ -56,11 +57,94 @@ namespace Personel_Takip
             }
         }
 
-        private void btnMekle_Click(object sender, EventArgs e)
+      
+        private void UpdatePrim(string ad, string soyad, double prim)
+        {
+            using (OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.oledb.12.0;Data Source=GirisEkranı.accdb"))
+            {
+                using (OleDbCommand cmd = new OleDbCommand("UPDATE personel SET p_prim = p_prim + @prim WHERE p_ad = @ad AND p_soyad = @soyad", conn))
+                {
+                    cmd.Parameters.AddWithValue("@prim", prim);
+                    cmd.Parameters.AddWithValue("@ad", ad);
+                    cmd.Parameters.AddWithValue("@soyad", soyad);
+
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hata Oluştu: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+       
+
+       
+        private void LabelaYazdırMesaiUcreti()
+        {
+
+            try
+            {
+                using (OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.oledb.12.0;Data Source=GirisEkranı.accdb"))
+                {
+                    using (OleDbCommand cmd = new OleDbCommand("SELECT TOP 1 m_saatlikucret FROM mesai ORDER BY m_degismetarihi DESC", conn))
+                    {
+                        conn.Open();
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            double saatUcreti = Convert.ToDouble(result);
+                            labelBilgi.Text = $"Mesai Saat Ücreti: {saatUcreti:C2}";
+                        }
+                        else
+                        {
+                            labelBilgi.Text = "Mesai saat ücreti bulunamadı.";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata Oluştu: " + ex.Message);
+            }
+
+        }
+        private void UpdateMesaiBilgisi(double yeniSaatUcreti)
         {
             try
             {
-                // Mesai ekle sekmesinden seçilen değerleri al
+                using (OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.oledb.12.0;Data Source=GirisEkranı.accdb"))
+                {
+                    using (OleDbCommand cmd = new OleDbCommand("UPDATE mesai SET m_saatlikucret = @saatUcreti, m_degismetarihi = @degisimTarihi", conn))
+                    {
+                        DateTime degisimTarihi = DateTime.Now;
+                        string degisimTarihiString = degisimTarihi.ToString("dd/MM/yyyy");
+
+                        cmd.Parameters.AddWithValue("@saatUcreti", yeniSaatUcreti);
+                        cmd.Parameters.AddWithValue("@degisimTarihi", degisimTarihiString);
+
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Mesai bilgileri başarıyla güncellendi.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata Oluştu: " + ex.Message);
+            }
+        }
+
+             private void btnMekle_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+
                 string secilenPersonel = comboBoxMesai.SelectedItem?.ToString();
                 int secilenSaat = Convert.ToInt32(comboBoxMsaati.SelectedItem);
 
@@ -120,30 +204,8 @@ namespace Personel_Takip
 
             return saatlikUcret;
         }
-        private void UpdatePrim(string ad, string soyad, double prim)
-        {
-            using (OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.oledb.12.0;Data Source=GirisEkranı.accdb"))
-            {
-                using (OleDbCommand cmd = new OleDbCommand("UPDATE personel SET p_prim = p_prim + @prim WHERE p_ad = @ad AND p_soyad = @soyad", conn))
-                {
-                    cmd.Parameters.AddWithValue("@prim", prim);
-                    cmd.Parameters.AddWithValue("@ad", ad);
-                    cmd.Parameters.AddWithValue("@soyad", soyad);
 
-                    try
-                    {
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Hata Oluştu: " + ex.Message);
-                    }
-                }
-            }
-        }
-
-        private void btnSıfırlama_Click(object sender, EventArgs e)
+        private void btnSıfırla_Click(object sender, EventArgs e)
         {
             try
             {
@@ -155,7 +217,7 @@ namespace Personel_Takip
                         string yazisekli = tarih.ToString("dd/MM/yyyy");
                         string primsifirlama = yazisekli;
 
-                        cmd.Parameters.AddWithValue("@tarih",primsifirlama );
+                        cmd.Parameters.AddWithValue("@tarih", primsifirlama);
 
                         try
                         {
@@ -174,6 +236,11 @@ namespace Personel_Takip
             {
                 MessageBox.Show("Hata Oluştu: " + ex.Message);
             }
+        }
+
+        private void btnMesaiDegis_Click(object sender, EventArgs e)
+        {pMesai.Visible = true;
+
 
         }
 
@@ -192,66 +259,13 @@ namespace Personel_Takip
                 MessageBox.Show("Hata Oluştu: " + ex.Message);
             }
         }
-        private void LabelaYazdırMesaiUcreti()
-        {
 
-            try
-            {
-                using (OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.oledb.12.0;Data Source=GirisEkranı.accdb"))
-                {
-                    using (OleDbCommand cmd = new OleDbCommand("SELECT TOP 1 m_saatlikucret FROM mesai ORDER BY m_degismetarihi DESC", conn))
-                    {
-                        conn.Open();
-                        object result = cmd.ExecuteScalar();
-
-                        if (result != null)
-                        {
-                            double saatUcreti = Convert.ToDouble(result);
-                            labelBilgi.Text = $"Mesai Saat Ücreti: {saatUcreti:C2}";
-                        }
-                        else
-                        {
-                            labelBilgi.Text = "Mesai saat ücreti bulunamadı.";
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Hata Oluştu: " + ex.Message);
-            }
-
-        }
-        private void UpdateMesaiBilgisi(double yeniSaatUcreti)
-        {
-            try
-            {
-                using (OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.oledb.12.0;Data Source=GirisEkranı.accdb"))
-                {
-                    using (OleDbCommand cmd = new OleDbCommand("UPDATE mesai SET m_saatlikucret = @saatUcreti, m_degismetarihi = @degisimTarihi", conn))
-                    {
-                        DateTime degisimTarihi = DateTime.Now;
-                        string degisimTarihiString = degisimTarihi.ToString("dd/MM/yyyy");
-
-                        cmd.Parameters.AddWithValue("@saatUcreti", yeniSaatUcreti);
-                        cmd.Parameters.AddWithValue("@degisimTarihi", degisimTarihiString);
-
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Mesai bilgileri başarıyla güncellendi.");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Hata Oluştu: " + ex.Message);
-            }
-        }
-
-        private void buttonGoster_Click(object sender, EventArgs e)
+        private void btnYazdir_Click(object sender, EventArgs e)
         {
             LabelaYazdırMesaiUcreti();
         }
+
+        
     }
 
 }
