@@ -213,6 +213,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MesaiIsleri";
             this.Text = "Mesai İşleri";
+            this.Load += new System.EventHandler(this.MesaiIsleri_Load);
             this.panel1.ResumeLayout(false);
             this.pMesai.ResumeLayout(false);
             this.pMesai.PerformLayout();

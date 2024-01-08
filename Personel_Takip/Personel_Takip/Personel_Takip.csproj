@@ -92,6 +92,18 @@
     <Compile Include="GirisEkrani.Designer.cs">
       <DependentUpon>GirisEkrani.cs</DependentUpon>
     </Compile>
+    <Compile Include="HesapIsleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HesapIsleri.Designer.cs">
+      <DependentUpon>HesapIsleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kapasite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kapasite.Designer.cs">
+      <DependentUpon>Kapasite.cs</DependentUpon>
+    </Compile>
     <Compile Include="MaasDuzenle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +156,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GirisEkrani.resx">
       <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HesapIsleri.resx">
+      <DependentUpon>HesapIsleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kapasite.resx">
+      <DependentUpon>Kapasite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MaasDuzenle.resx">
       <DependentUpon>MaasDuzenle.cs</DependentUpon>

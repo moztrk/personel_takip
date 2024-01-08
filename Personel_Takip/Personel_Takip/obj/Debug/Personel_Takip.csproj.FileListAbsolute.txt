@@ -21,3 +21,5 @@ C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_T
 C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.MaasIsleri.resources
 C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.MesaiIsleri.resources
 C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.DepartmanIsleri.resources
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.Kapasite.resources
+C:\Users\moztr\OneDrive\Belgeler\GitHub\personel_takip\Personel_Takip\Personel_Takip\obj\Debug\Personel_Takip.HesapIsleri.resources

@@ -13,7 +13,7 @@ namespace Personel_Takip
 {
     public partial class PersonelEkle : Form
     {
-        public int MaxPersonelSayisi = DepartmanIsleri.MevcutPersonelSayisi;
+        public int MaxPersonelSayisi = Kapasite.Mevcut();
 
 
         private int kalanEklemeHakki;
@@ -44,7 +44,7 @@ namespace Personel_Takip
             dataGridView1.Columns["p_zamtarihi"].HeaderText = "Son Zam Tarihi";
             dataGridView1.Columns["p_prim"].HeaderText = "Güncel Prim";
             dataGridView1.Columns["p_primyenilemetarihi"].HeaderText = "Prim Güncellme Tarihi";
-            dataGridView1.Columns["p_kalanizinhakkı"].HeaderText = "Kalan Yıllık İzin Hakkı";
+            dataGridView1.Columns["p_kalanizinhakki"].HeaderText = "Kalan Yıllık İzin Hakkı";
             dataGridView1.Columns["p_departman"].HeaderText = "Departman";
 
 
@@ -92,6 +92,7 @@ namespace Personel_Takip
                     string maas = txtMaas.Text;
                     string departman = comboBoxDepartman.SelectedItem?.ToString();
                     string prim = textBoxP.Text;
+                    int izin = 30;
 
                     DateTime now = DateTime.Now;// eklenecek olan personelin işe başladığı gün
                     string formattedDate = now.ToString("dd/MM/yyyy");
@@ -115,8 +116,8 @@ namespace Personel_Takip
                     cmd = new OleDbCommand();
                     conn.Open();
                     cmd.Connection = conn;
-                    string query = "INSERT INTO personel (p_ad, p_soyad, p_maas, p_isegiris, p_kimlik, p_departman,p_prim) " +
-                                      "VALUES (@ad, @soyad, @maas, @girisTarihi, @tc, @departman,@prim)";
+                    string query = "INSERT INTO personel (p_ad, p_soyad, p_maas, p_isegiris, p_kimlik, p_departman,p_prim,p_kalanizinhakki) " +
+                                      "VALUES (@ad, @soyad, @maas, @girisTarihi, @tc, @departman,@prim,@izin)";
 
                     cmd.Parameters.AddWithValue("@ad", ad);
                     cmd.Parameters.AddWithValue("@soyad", soyad);
@@ -125,6 +126,7 @@ namespace Personel_Takip
                     cmd.Parameters.AddWithValue("@tc", tc);
                     cmd.Parameters.AddWithValue("@departman", departman);
                     cmd.Parameters.AddWithValue("@prim", prim);
+                    cmd.Parameters.AddWithValue("@izin",izin);
                     cmd.CommandText = query;
                         cmd.ExecuteNonQuery();
 
@@ -155,6 +157,7 @@ namespace Personel_Takip
             txtSoyad.Text = string.Empty;
             txtTc.Text = string.Empty;
             txtMaas.Text = string.Empty;
+            textBoxP.Text = string.Empty;
         }
 
         private void button2_Click(object sender, EventArgs e)

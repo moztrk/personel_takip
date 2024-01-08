@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Personel_Takip.exe" size="2702816">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Personel_Takip.exe" size="2720224">
       <assemblyIdentity name="Personel_Takip" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FGYZQjgD6m47b3WicVxK7in9Bt/QDcJLDUDWD5bQEec=</dsig:DigestValue>
+        <dsig:DigestValue>ObSzouVyuHvFqpF0013n/gt4bzpQ2WdhRO3TvZi2Ql8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

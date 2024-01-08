@@ -265,7 +265,13 @@ namespace Personel_Takip
             LabelaYazdırMesaiUcreti();
         }
 
-        
+        private void MesaiIsleri_Load(object sender, EventArgs e)
+        {
+            if (GirisEkrani.yetki == "personel")
+            {
+                btnMesaiDegis.Enabled = false;
+            }
+        }
     }
 
 }

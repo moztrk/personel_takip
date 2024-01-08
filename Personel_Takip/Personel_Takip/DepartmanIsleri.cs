@@ -14,13 +14,7 @@ namespace Personel_Takip
 {
     public partial class DepartmanIsleri : Form
     {
-        public static int yonetimKapasite { get; set; } = 2;
-        public static int muhasebeKapasite { get; set; } = 1;
-        public static int sekreterKapasite { get; set; } = 2;
-        public static int pazarlamaKapasite { get; set; } = 4;
-        public static int uretimKapasite { get; set; } = 6;
-        public static int lojistikKapasite { get; set; } = 5;
-
+      
 
         //+++++++++++++++++++++++++++++++
         
@@ -28,6 +22,7 @@ namespace Personel_Takip
         public DepartmanIsleri()
         {
             InitializeComponent();
+          
 
 
         }
@@ -35,15 +30,9 @@ namespace Personel_Takip
         OleDbCommand cmd;
         OleDbDataReader reader;
 
-        public static int MevcutPersonelSayisi
-        {
-            get
-            {
-                return yonetimKapasite + muhasebeKapasite + sekreterKapasite +
-                       pazarlamaKapasite + uretimKapasite + lojistikKapasite;
-            }
-        }
-       
+      
+
+      
         private void DataGridTablo(string departman,DataGridView dataGridView) // tablolar için
         {
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter($"SELECT p_ad, p_soyad FROM personel WHERE p_departman = '{departman}'", conn);
@@ -52,12 +41,15 @@ namespace Personel_Takip
             dataGridView.DataSource = dt;
             dataGridView.Columns["p_ad"].HeaderText = "Adı";
             dataGridView.Columns["p_soyad"].HeaderText = "Soyadı";
-
         }
       
 
         private void DepartmanIsleri_Load(object sender, EventArgs e)
         {
+            if (GirisEkrani.yetki == "personel")
+            {
+                btnHesap.Enabled = false;
+            }
             conn = new OleDbConnection("Provider=Microsoft.ACE.oledb.12.0;Data Source=GirisEkranı.accdb");
             conn.Open();
             DataGridTablo("Yönetim",dataGridViewY);
@@ -177,6 +169,20 @@ namespace Personel_Takip
         private void btnLabelL_Click(object sender, EventArgs e)
         {
             Yazdirma("Lojistik",lblLmaas);
+        }
+
+        private void btnKapasite_Click(object sender, EventArgs e)
+        {
+            Kapasite f5=new Kapasite();
+            f5.Show();
+            this.Hide();
+        }
+
+        private void btnHesap_Click(object sender, EventArgs e)
+        {
+            HesapIsleri f5=new HesapIsleri();
+            f5.Show();
+                this.Hide();
         }
     }
     

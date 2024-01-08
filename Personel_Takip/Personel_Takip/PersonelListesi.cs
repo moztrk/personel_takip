@@ -61,7 +61,7 @@ namespace Personel_Takip
             dataGridView1.Columns["p_zamtarihi"].HeaderText = "Son Zam Tarihi";
             dataGridView1.Columns["p_prim"].HeaderText = "Güncel Prim";
             dataGridView1.Columns["p_primyenilemetarihi"].HeaderText = "Prim Güncellme Tarihi";
-            dataGridView1.Columns["p_kalanizinhakkı"].HeaderText = "Kalan Yıllık İzin Hakkı";
+            dataGridView1.Columns["p_kalanizinhakki"].HeaderText = "Kalan Yıllık İzin Hakkı";
             dataGridView1.Columns["p_departman"].HeaderText = "Departman";
         }
 

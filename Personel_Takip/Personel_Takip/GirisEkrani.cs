@@ -18,10 +18,7 @@ namespace Personel_Takip
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        static public string yetki;
         OleDbConnection conn;
         OleDbCommand cmd;
         OleDbDataReader reader;
@@ -41,6 +38,7 @@ namespace Personel_Takip
                 Menu f2 = new Menu();
                 f2.Show();
                 this.Hide();
+                yetki = reader["k_yetki"].ToString();
             }
             else
             {

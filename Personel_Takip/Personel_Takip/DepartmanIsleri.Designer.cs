@@ -30,40 +30,42 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DepartmanIsleri));
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnKapasite = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMenu = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.labelYoran = new System.Windows.Forms.Label();
+            this.labelYmaas = new System.Windows.Forms.Label();
+            this.buttonLabelY = new System.Windows.Forms.Button();
             this.labelY = new System.Windows.Forms.Label();
             this.dataGridViewY = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblMmaas = new System.Windows.Forms.Label();
+            this.btnLabelM = new System.Windows.Forms.Button();
             this.labelM = new System.Windows.Forms.Label();
             this.dataGridViewM = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblSmaas = new System.Windows.Forms.Label();
+            this.btnLabelS = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewS = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.lblPmaas = new System.Windows.Forms.Label();
+            this.btnLabelP = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewP = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.lblUmaas = new System.Windows.Forms.Label();
+            this.btnLabelU = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewU = new System.Windows.Forms.DataGridView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dataGridViewL = new System.Windows.Forms.DataGridView();
-            this.buttonLabelY = new System.Windows.Forms.Button();
-            this.labelYmaas = new System.Windows.Forms.Label();
-            this.labelYoran = new System.Windows.Forms.Label();
-            this.lblMmaas = new System.Windows.Forms.Label();
-            this.btnLabelM = new System.Windows.Forms.Button();
-            this.lblSmaas = new System.Windows.Forms.Label();
-            this.btnLabelS = new System.Windows.Forms.Button();
-            this.lblPmaas = new System.Windows.Forms.Label();
-            this.btnLabelP = new System.Windows.Forms.Button();
-            this.lblUmaas = new System.Windows.Forms.Label();
-            this.btnLabelU = new System.Windows.Forms.Button();
             this.lblLmaas = new System.Windows.Forms.Label();
             this.btnLabelL = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dataGridViewL = new System.Windows.Forms.DataGridView();
+            this.btnHesap = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -84,6 +86,8 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.pnlMenu.Controls.Add(this.btnHesap);
+            this.pnlMenu.Controls.Add(this.btnKapasite);
             this.pnlMenu.Controls.Add(this.pictureBox1);
             this.pnlMenu.Controls.Add(this.btnMenu);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -91,6 +95,19 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(200, 538);
             this.pnlMenu.TabIndex = 0;
+            // 
+            // btnKapasite
+            // 
+            this.btnKapasite.BackColor = System.Drawing.Color.Moccasin;
+            this.btnKapasite.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnKapasite.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKapasite.Location = new System.Drawing.Point(0, 402);
+            this.btnKapasite.Name = "btnKapasite";
+            this.btnKapasite.Size = new System.Drawing.Size(197, 40);
+            this.btnKapasite.TabIndex = 2;
+            this.btnKapasite.Text = "Kapasite";
+            this.btnKapasite.UseVisualStyleBackColor = false;
+            this.btnKapasite.Click += new System.EventHandler(this.btnKapasite_Click);
             // 
             // pictureBox1
             // 
@@ -107,7 +124,7 @@
             this.btnMenu.BackColor = System.Drawing.Color.Moccasin;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnMenu.Location = new System.Drawing.Point(3, 425);
+            this.btnMenu.Location = new System.Drawing.Point(0, 448);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(197, 40);
             this.btnMenu.TabIndex = 0;
@@ -145,6 +162,37 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Yönetim";
             // 
+            // labelYoran
+            // 
+            this.labelYoran.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelYoran.Location = new System.Drawing.Point(47, 333);
+            this.labelYoran.Name = "labelYoran";
+            this.labelYoran.Size = new System.Drawing.Size(392, 140);
+            this.labelYoran.TabIndex = 4;
+            this.labelYoran.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelYmaas
+            // 
+            this.labelYmaas.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelYmaas.Location = new System.Drawing.Point(43, 106);
+            this.labelYmaas.Name = "labelYmaas";
+            this.labelYmaas.Size = new System.Drawing.Size(396, 158);
+            this.labelYmaas.TabIndex = 3;
+            this.labelYmaas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonLabelY
+            // 
+            this.buttonLabelY.BackColor = System.Drawing.Color.YellowGreen;
+            this.buttonLabelY.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonLabelY.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.buttonLabelY.Location = new System.Drawing.Point(43, 33);
+            this.buttonLabelY.Name = "buttonLabelY";
+            this.buttonLabelY.Size = new System.Drawing.Size(468, 34);
+            this.buttonLabelY.TabIndex = 2;
+            this.buttonLabelY.Text = "Maaş Giderini Göster";
+            this.buttonLabelY.UseVisualStyleBackColor = false;
+            this.buttonLabelY.Click += new System.EventHandler(this.buttonLabelY_Click);
+            // 
             // labelY
             // 
             this.labelY.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -179,6 +227,28 @@
             this.tabPage2.Size = new System.Drawing.Size(1145, 509);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Muhasebe";
+            // 
+            // lblMmaas
+            // 
+            this.lblMmaas.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMmaas.Location = new System.Drawing.Point(32, 108);
+            this.lblMmaas.Name = "lblMmaas";
+            this.lblMmaas.Size = new System.Drawing.Size(396, 158);
+            this.lblMmaas.TabIndex = 5;
+            this.lblMmaas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnLabelM
+            // 
+            this.btnLabelM.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnLabelM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLabelM.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnLabelM.Location = new System.Drawing.Point(32, 35);
+            this.btnLabelM.Name = "btnLabelM";
+            this.btnLabelM.Size = new System.Drawing.Size(468, 34);
+            this.btnLabelM.TabIndex = 4;
+            this.btnLabelM.Text = "Maaş Giderini Göster";
+            this.btnLabelM.UseVisualStyleBackColor = false;
+            this.btnLabelM.Click += new System.EventHandler(this.btnLabelM_Click);
             // 
             // labelM
             // 
@@ -215,6 +285,28 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Sekreterlik";
             // 
+            // lblSmaas
+            // 
+            this.lblSmaas.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSmaas.Location = new System.Drawing.Point(40, 140);
+            this.lblSmaas.Name = "lblSmaas";
+            this.lblSmaas.Size = new System.Drawing.Size(396, 158);
+            this.lblSmaas.TabIndex = 5;
+            this.lblSmaas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnLabelS
+            // 
+            this.btnLabelS.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnLabelS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLabelS.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnLabelS.Location = new System.Drawing.Point(40, 67);
+            this.btnLabelS.Name = "btnLabelS";
+            this.btnLabelS.Size = new System.Drawing.Size(468, 34);
+            this.btnLabelS.TabIndex = 4;
+            this.btnLabelS.Text = "Maaş Giderini Göster";
+            this.btnLabelS.UseVisualStyleBackColor = false;
+            this.btnLabelS.Click += new System.EventHandler(this.btnLabelS_Click);
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -249,6 +341,28 @@
             this.tabPage4.Size = new System.Drawing.Size(1145, 509);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Pazarlama";
+            // 
+            // lblPmaas
+            // 
+            this.lblPmaas.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPmaas.Location = new System.Drawing.Point(29, 140);
+            this.lblPmaas.Name = "lblPmaas";
+            this.lblPmaas.Size = new System.Drawing.Size(396, 158);
+            this.lblPmaas.TabIndex = 5;
+            this.lblPmaas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnLabelP
+            // 
+            this.btnLabelP.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnLabelP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLabelP.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnLabelP.Location = new System.Drawing.Point(29, 67);
+            this.btnLabelP.Name = "btnLabelP";
+            this.btnLabelP.Size = new System.Drawing.Size(468, 34);
+            this.btnLabelP.TabIndex = 4;
+            this.btnLabelP.Text = "Maaş Giderini Göster";
+            this.btnLabelP.UseVisualStyleBackColor = false;
+            this.btnLabelP.Click += new System.EventHandler(this.btnLabelP_Click);
             // 
             // label2
             // 
@@ -285,6 +399,28 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Üretim";
             // 
+            // lblUmaas
+            // 
+            this.lblUmaas.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUmaas.Location = new System.Drawing.Point(6, 122);
+            this.lblUmaas.Name = "lblUmaas";
+            this.lblUmaas.Size = new System.Drawing.Size(396, 158);
+            this.lblUmaas.TabIndex = 5;
+            this.lblUmaas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnLabelU
+            // 
+            this.btnLabelU.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnLabelU.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLabelU.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnLabelU.Location = new System.Drawing.Point(6, 49);
+            this.btnLabelU.Name = "btnLabelU";
+            this.btnLabelU.Size = new System.Drawing.Size(468, 34);
+            this.btnLabelU.TabIndex = 4;
+            this.btnLabelU.Text = "Maaş Giderini Göster";
+            this.btnLabelU.UseVisualStyleBackColor = false;
+            this.btnLabelU.Click += new System.EventHandler(this.btnLabelU_Click);
+            // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -320,146 +456,6 @@
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Lojistik";
             // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(828, 45);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(290, 34);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Çalışanlar";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dataGridViewL
-            // 
-            this.dataGridViewL.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
-            this.dataGridViewL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewL.Location = new System.Drawing.Point(831, 92);
-            this.dataGridViewL.Name = "dataGridViewL";
-            this.dataGridViewL.RowHeadersWidth = 51;
-            this.dataGridViewL.RowTemplate.Height = 24;
-            this.dataGridViewL.Size = new System.Drawing.Size(293, 150);
-            this.dataGridViewL.TabIndex = 2;
-            // 
-            // buttonLabelY
-            // 
-            this.buttonLabelY.BackColor = System.Drawing.Color.YellowGreen;
-            this.buttonLabelY.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonLabelY.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.buttonLabelY.Location = new System.Drawing.Point(43, 33);
-            this.buttonLabelY.Name = "buttonLabelY";
-            this.buttonLabelY.Size = new System.Drawing.Size(468, 34);
-            this.buttonLabelY.TabIndex = 2;
-            this.buttonLabelY.Text = "Maaş Giderini Göster";
-            this.buttonLabelY.UseVisualStyleBackColor = false;
-            this.buttonLabelY.Click += new System.EventHandler(this.buttonLabelY_Click);
-            // 
-            // labelYmaas
-            // 
-            this.labelYmaas.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelYmaas.Location = new System.Drawing.Point(43, 106);
-            this.labelYmaas.Name = "labelYmaas";
-            this.labelYmaas.Size = new System.Drawing.Size(396, 158);
-            this.labelYmaas.TabIndex = 3;
-            this.labelYmaas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelYoran
-            // 
-            this.labelYoran.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelYoran.Location = new System.Drawing.Point(47, 333);
-            this.labelYoran.Name = "labelYoran";
-            this.labelYoran.Size = new System.Drawing.Size(392, 140);
-            this.labelYoran.TabIndex = 4;
-            this.labelYoran.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblMmaas
-            // 
-            this.lblMmaas.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMmaas.Location = new System.Drawing.Point(32, 108);
-            this.lblMmaas.Name = "lblMmaas";
-            this.lblMmaas.Size = new System.Drawing.Size(396, 158);
-            this.lblMmaas.TabIndex = 5;
-            this.lblMmaas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnLabelM
-            // 
-            this.btnLabelM.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnLabelM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLabelM.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnLabelM.Location = new System.Drawing.Point(32, 35);
-            this.btnLabelM.Name = "btnLabelM";
-            this.btnLabelM.Size = new System.Drawing.Size(468, 34);
-            this.btnLabelM.TabIndex = 4;
-            this.btnLabelM.Text = "Maaş Giderini Göster";
-            this.btnLabelM.UseVisualStyleBackColor = false;
-            this.btnLabelM.Click += new System.EventHandler(this.btnLabelM_Click);
-            // 
-            // lblSmaas
-            // 
-            this.lblSmaas.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSmaas.Location = new System.Drawing.Point(40, 140);
-            this.lblSmaas.Name = "lblSmaas";
-            this.lblSmaas.Size = new System.Drawing.Size(396, 158);
-            this.lblSmaas.TabIndex = 5;
-            this.lblSmaas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnLabelS
-            // 
-            this.btnLabelS.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnLabelS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLabelS.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnLabelS.Location = new System.Drawing.Point(40, 67);
-            this.btnLabelS.Name = "btnLabelS";
-            this.btnLabelS.Size = new System.Drawing.Size(468, 34);
-            this.btnLabelS.TabIndex = 4;
-            this.btnLabelS.Text = "Maaş Giderini Göster";
-            this.btnLabelS.UseVisualStyleBackColor = false;
-            this.btnLabelS.Click += new System.EventHandler(this.btnLabelS_Click);
-            // 
-            // lblPmaas
-            // 
-            this.lblPmaas.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPmaas.Location = new System.Drawing.Point(29, 140);
-            this.lblPmaas.Name = "lblPmaas";
-            this.lblPmaas.Size = new System.Drawing.Size(396, 158);
-            this.lblPmaas.TabIndex = 5;
-            this.lblPmaas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnLabelP
-            // 
-            this.btnLabelP.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnLabelP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLabelP.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnLabelP.Location = new System.Drawing.Point(29, 67);
-            this.btnLabelP.Name = "btnLabelP";
-            this.btnLabelP.Size = new System.Drawing.Size(468, 34);
-            this.btnLabelP.TabIndex = 4;
-            this.btnLabelP.Text = "Maaş Giderini Göster";
-            this.btnLabelP.UseVisualStyleBackColor = false;
-            this.btnLabelP.Click += new System.EventHandler(this.btnLabelP_Click);
-            // 
-            // lblUmaas
-            // 
-            this.lblUmaas.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUmaas.Location = new System.Drawing.Point(6, 122);
-            this.lblUmaas.Name = "lblUmaas";
-            this.lblUmaas.Size = new System.Drawing.Size(396, 158);
-            this.lblUmaas.TabIndex = 5;
-            this.lblUmaas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnLabelU
-            // 
-            this.btnLabelU.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnLabelU.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLabelU.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnLabelU.Location = new System.Drawing.Point(6, 49);
-            this.btnLabelU.Name = "btnLabelU";
-            this.btnLabelU.Size = new System.Drawing.Size(468, 34);
-            this.btnLabelU.TabIndex = 4;
-            this.btnLabelU.Text = "Maaş Giderini Göster";
-            this.btnLabelU.UseVisualStyleBackColor = false;
-            this.btnLabelU.Click += new System.EventHandler(this.btnLabelU_Click);
-            // 
             // lblLmaas
             // 
             this.lblLmaas.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -481,6 +477,40 @@
             this.btnLabelL.Text = "Maaş Giderini Göster";
             this.btnLabelL.UseVisualStyleBackColor = false;
             this.btnLabelL.Click += new System.EventHandler(this.btnLabelL_Click);
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(828, 45);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(290, 34);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Çalışanlar";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dataGridViewL
+            // 
+            this.dataGridViewL.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dataGridViewL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewL.Location = new System.Drawing.Point(831, 92);
+            this.dataGridViewL.Name = "dataGridViewL";
+            this.dataGridViewL.RowHeadersWidth = 51;
+            this.dataGridViewL.RowTemplate.Height = 24;
+            this.dataGridViewL.Size = new System.Drawing.Size(293, 150);
+            this.dataGridViewL.TabIndex = 2;
+            // 
+            // btnHesap
+            // 
+            this.btnHesap.BackColor = System.Drawing.Color.Moccasin;
+            this.btnHesap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHesap.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnHesap.Location = new System.Drawing.Point(0, 356);
+            this.btnHesap.Name = "btnHesap";
+            this.btnHesap.Size = new System.Drawing.Size(197, 40);
+            this.btnHesap.TabIndex = 3;
+            this.btnHesap.Text = "Aylık Gider";
+            this.btnHesap.UseVisualStyleBackColor = false;
+            this.btnHesap.Click += new System.EventHandler(this.btnHesap_Click);
             // 
             // DepartmanIsleri
             // 
@@ -551,5 +581,7 @@
         private System.Windows.Forms.Button btnLabelU;
         private System.Windows.Forms.Label lblLmaas;
         private System.Windows.Forms.Button btnLabelL;
+        private System.Windows.Forms.Button btnKapasite;
+        private System.Windows.Forms.Button btnHesap;
     }
 }

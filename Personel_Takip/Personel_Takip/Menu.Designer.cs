@@ -40,7 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnDepartman = new System.Windows.Forms.Button();
             this.btnIzin = new System.Windows.Forms.Button();
-            this.btnHesap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -183,20 +182,6 @@
             this.btnIzin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIzin.UseVisualStyleBackColor = true;
             // 
-            // btnHesap
-            // 
-            this.btnHesap.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnHesap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHesap.ImageKey = "financial_document_calculator_pen_dollar_coin_money_icon_205706.ico";
-            this.btnHesap.ImageList = this.ımageList1;
-            this.btnHesap.Location = new System.Drawing.Point(429, 213);
-            this.btnHesap.Name = "btnHesap";
-            this.btnHesap.Size = new System.Drawing.Size(228, 62);
-            this.btnHesap.TabIndex = 10;
-            this.btnHesap.Text = "İşletme Hesapları";
-            this.btnHesap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHesap.UseVisualStyleBackColor = true;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -204,7 +189,6 @@
             this.BackgroundImage = global::Personel_Takip.Properties.Resources._374296;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1144, 493);
-            this.Controls.Add(this.btnHesap);
             this.Controls.Add(this.btnIzin);
             this.Controls.Add(this.btnDepartman);
             this.Controls.Add(this.label1);
@@ -237,6 +221,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDepartman;
         private System.Windows.Forms.Button btnIzin;
-        private System.Windows.Forms.Button btnHesap;
     }
 }

@@ -55,7 +55,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Kullanıcı Adı:";
             this.label1.UseCompatibleTextRendering = true;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+       //     this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 

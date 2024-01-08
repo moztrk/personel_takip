@@ -59,7 +59,7 @@ namespace Personel_Takip
 
         private void Menu_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void buttonSil_Click(object sender, EventArgs e)
