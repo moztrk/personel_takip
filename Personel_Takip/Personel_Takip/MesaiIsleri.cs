@@ -179,7 +179,7 @@ namespace Personel_Takip
 
             using (OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.oledb.12.0;Data Source=GirisEkranı.accdb"))
             {
-                using (OleDbCommand cmd = new OleDbCommand("SELECT m_saatlikucret FROM mesai ", conn))
+                using (OleDbCommand cmd = new OleDbCommand("SELECT m_saatlikucret FROM mesai WHERE ad = @ad AND soyad = @soyad ORDER BY m_degismetarihi DESC", conn))
                 {
                     cmd.Parameters.AddWithValue("@ad", ad);
                     cmd.Parameters.AddWithValue("@soyad", soyad);

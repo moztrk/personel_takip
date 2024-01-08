@@ -13,8 +13,9 @@ namespace Personel_Takip
 {
     public partial class PersonelEkle : Form
     {
-        public static int MaxPersonelSayisi { get; set; } = 20; // departman için get set
-        
+        public int MaxPersonelSayisi = DepartmanIsleri.MevcutPersonelSayisi;
+
+
         private int kalanEklemeHakki;
 
         public PersonelEkle()
@@ -52,7 +53,7 @@ namespace Personel_Takip
             comboBoxDepartman.Items.Add("Muhasebe"); 
             comboBoxDepartman.Items.Add("Sekreterlik");
             comboBoxDepartman.Items.Add("Pazarlama");
-            comboBoxDepartman.Items.Add("Uretim");
+            comboBoxDepartman.Items.Add("Üretim");
             comboBoxDepartman.Items.Add("Lojistik");
         }
 
@@ -90,6 +91,7 @@ namespace Personel_Takip
                     string tc = txtTc.Text;
                     string maas = txtMaas.Text;
                     string departman = comboBoxDepartman.SelectedItem?.ToString();
+                    string prim = textBoxP.Text;
 
                     DateTime now = DateTime.Now;// eklenecek olan personelin işe başladığı gün
                     string formattedDate = now.ToString("dd/MM/yyyy");
@@ -103,7 +105,7 @@ namespace Personel_Takip
                         return;
                     }
 
-                    if (ad == "" || soyad == "" || tc == "" || maas == "" || departman == null)
+                    if (ad == "" || soyad == "" || tc == "" || maas == "" ||prim == ""|| departman == null)
                     {
                         MessageBox.Show("Lütfen tüm bilgileri girin ve bir departman seçin.");
                     }
@@ -113,8 +115,8 @@ namespace Personel_Takip
                     cmd = new OleDbCommand();
                     conn.Open();
                     cmd.Connection = conn;
-                    string query = "INSERT INTO personel (p_ad, p_soyad, p_maas, p_isegiris, p_kimlik, p_departman) " +
-                                      "VALUES (@ad, @soyad, @maas, @girisTarihi, @tc, @departman)";
+                    string query = "INSERT INTO personel (p_ad, p_soyad, p_maas, p_isegiris, p_kimlik, p_departman,p_prim) " +
+                                      "VALUES (@ad, @soyad, @maas, @girisTarihi, @tc, @departman,@prim)";
 
                     cmd.Parameters.AddWithValue("@ad", ad);
                     cmd.Parameters.AddWithValue("@soyad", soyad);
@@ -122,6 +124,7 @@ namespace Personel_Takip
                     cmd.Parameters.AddWithValue("@girisTarihi", girisTarihi);
                     cmd.Parameters.AddWithValue("@tc", tc);
                     cmd.Parameters.AddWithValue("@departman", departman);
+                    cmd.Parameters.AddWithValue("@prim", prim);
                     cmd.CommandText = query;
                         cmd.ExecuteNonQuery();
 
@@ -145,6 +148,7 @@ namespace Personel_Takip
                 conn.Close();
             }
         }
+
         private void Temizle()
         {
             txtAd.Text = string.Empty;
@@ -227,6 +231,23 @@ namespace Personel_Takip
             }
         }
 
-      
+        private void textBoxP_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+            {
+                textBoxP.Text = string.Empty;
+            }
+        }
+
+        private void textBoxP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+
+            }
+        }
+
+       
     }
 }

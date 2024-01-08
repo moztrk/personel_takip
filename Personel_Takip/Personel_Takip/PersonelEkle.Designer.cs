@@ -45,6 +45,8 @@
             this.labelDolulukOrani = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxDepartman = new System.Windows.Forms.ComboBox();
+            this.labelPrim = new System.Windows.Forms.Label();
+            this.textBoxP = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +55,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(50, 111);
+            this.label1.Location = new System.Drawing.Point(31, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 23);
             this.label1.TabIndex = 0;
@@ -64,7 +66,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(50, 152);
+            this.label2.Location = new System.Drawing.Point(31, 154);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 23);
             this.label2.TabIndex = 1;
@@ -75,7 +77,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(50, 193);
+            this.label3.Location = new System.Drawing.Point(31, 195);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 23);
             this.label3.TabIndex = 2;
@@ -86,7 +88,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(50, 232);
+            this.label5.Location = new System.Drawing.Point(41, 236);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 23);
             this.label5.TabIndex = 4;
@@ -94,7 +96,7 @@
             // 
             // txtAd
             // 
-            this.txtAd.Location = new System.Drawing.Point(185, 111);
+            this.txtAd.Location = new System.Drawing.Point(216, 111);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(100, 22);
             this.txtAd.TabIndex = 5;
@@ -102,7 +104,7 @@
             // 
             // txtSoyad
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(185, 154);
+            this.txtSoyad.Location = new System.Drawing.Point(216, 154);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(100, 22);
             this.txtSoyad.TabIndex = 6;
@@ -110,7 +112,7 @@
             // 
             // txtTc
             // 
-            this.txtTc.Location = new System.Drawing.Point(185, 195);
+            this.txtTc.Location = new System.Drawing.Point(216, 195);
             this.txtTc.MaxLength = 11;
             this.txtTc.Name = "txtTc";
             this.txtTc.Size = new System.Drawing.Size(100, 22);
@@ -120,7 +122,7 @@
             // 
             // txtMaas
             // 
-            this.txtMaas.Location = new System.Drawing.Point(185, 240);
+            this.txtMaas.Location = new System.Drawing.Point(216, 238);
             this.txtMaas.Name = "txtMaas";
             this.txtMaas.Size = new System.Drawing.Size(100, 22);
             this.txtMaas.TabIndex = 9;
@@ -141,11 +143,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(324, 36);
+            this.dataGridView1.Location = new System.Drawing.Point(350, 36);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(833, 333);
+            this.dataGridView1.Size = new System.Drawing.Size(807, 333);
             this.dataGridView1.TabIndex = 11;
             // 
             // buttonListe
@@ -191,7 +193,7 @@
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(3, 269);
+            this.label6.Location = new System.Drawing.Point(12, 305);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(149, 23);
             this.label6.TabIndex = 17;
@@ -202,10 +204,30 @@
             // 
             this.comboBoxDepartman.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDepartman.FormattingEnabled = true;
-            this.comboBoxDepartman.Location = new System.Drawing.Point(185, 268);
+            this.comboBoxDepartman.Location = new System.Drawing.Point(216, 307);
             this.comboBoxDepartman.Name = "comboBoxDepartman";
-            this.comboBoxDepartman.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxDepartman.Size = new System.Drawing.Size(103, 24);
             this.comboBoxDepartman.TabIndex = 18;
+            // 
+            // labelPrim
+            // 
+            this.labelPrim.BackColor = System.Drawing.Color.Transparent;
+            this.labelPrim.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelPrim.Location = new System.Drawing.Point(3, 268);
+            this.labelPrim.Name = "labelPrim";
+            this.labelPrim.Size = new System.Drawing.Size(184, 32);
+            this.labelPrim.TabIndex = 19;
+            this.labelPrim.Text = "Başlangıç Primi:";
+            this.labelPrim.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxP
+            // 
+            this.textBoxP.Location = new System.Drawing.Point(216, 275);
+            this.textBoxP.Name = "textBoxP";
+            this.textBoxP.Size = new System.Drawing.Size(100, 22);
+            this.textBoxP.TabIndex = 20;
+            this.textBoxP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxP_KeyDown);
+            this.textBoxP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxP_KeyPress);
             // 
             // PersonelEkle
             // 
@@ -213,6 +235,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Personel_Takip.Properties.Resources._374296;
             this.ClientSize = new System.Drawing.Size(1181, 523);
+            this.Controls.Add(this.textBoxP);
+            this.Controls.Add(this.labelPrim);
             this.Controls.Add(this.comboBoxDepartman);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.labelDolulukOrani);
@@ -258,5 +282,7 @@
         private System.Windows.Forms.Label labelDolulukOrani;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxDepartman;
+        private System.Windows.Forms.Label labelPrim;
+        private System.Windows.Forms.TextBox textBoxP;
     }
 }

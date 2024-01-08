@@ -66,6 +66,7 @@
             // 
             // comboBoxMsaati
             // 
+            this.comboBoxMsaati.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMsaati.FormattingEnabled = true;
             this.comboBoxMsaati.Location = new System.Drawing.Point(264, 154);
             this.comboBoxMsaati.Name = "comboBoxMsaati";
@@ -182,6 +183,7 @@
             // 
             // comboBoxMesai
             // 
+            this.comboBoxMesai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMesai.FormattingEnabled = true;
             this.comboBoxMesai.Location = new System.Drawing.Point(264, 61);
             this.comboBoxMesai.Name = "comboBoxMesai";
