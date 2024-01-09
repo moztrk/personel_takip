@@ -98,6 +98,12 @@
     <Compile Include="HesapIsleri.Designer.cs">
       <DependentUpon>HesapIsleri.cs</DependentUpon>
     </Compile>
+    <Compile Include="IzinIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzinIslemleri.Designer.cs">
+      <DependentUpon>IzinIslemleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kapasite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HesapIsleri.resx">
       <DependentUpon>HesapIsleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzinIslemleri.resx">
+      <DependentUpon>IzinIslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kapasite.resx">
       <DependentUpon>Kapasite.cs</DependentUpon>

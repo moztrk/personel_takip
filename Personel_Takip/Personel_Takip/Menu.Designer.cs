@@ -181,6 +181,7 @@
             this.btnIzin.Text = "İzin İşlemleri";
             this.btnIzin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIzin.UseVisualStyleBackColor = true;
+            this.btnIzin.Click += new System.EventHandler(this.btnIzin_Click);
             // 
             // Menu
             // 

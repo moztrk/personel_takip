@@ -55,7 +55,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Kullanıcı Adı:";
             this.label1.UseCompatibleTextRendering = true;
-       //     this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -102,7 +101,7 @@
             this.girisButton.Text = "Giriş";
             this.girisButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.girisButton.UseVisualStyleBackColor = false;
-            this.girisButton.Click += new System.EventHandler(this.button1_Click);
+            this.girisButton.Click += new System.EventHandler(this.girisButton_Click);
             // 
             // ımageList1
             // 
@@ -154,7 +153,7 @@
             this.cikisButton.TabIndex = 8;
             this.cikisButton.Text = "Çıkış";
             this.cikisButton.UseVisualStyleBackColor = false;
-            this.cikisButton.Click += new System.EventHandler(this.button2_Click);
+            this.cikisButton.Click += new System.EventHandler(this.cikisButton_Click);
             // 
             // GirisEkrani
             // 

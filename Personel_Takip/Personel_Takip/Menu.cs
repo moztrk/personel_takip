@@ -82,5 +82,12 @@ namespace Personel_Takip
             f4.Show();
             this.Hide();
         }
+
+        private void btnIzin_Click(object sender, EventArgs e)
+        {
+            IzinIslemleri ızinIslemleri = new IzinIslemleri();
+            ızinIslemleri.Show();
+            this.Hide();
+        }
     }
 }

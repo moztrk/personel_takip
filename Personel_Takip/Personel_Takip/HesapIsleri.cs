@@ -81,7 +81,7 @@ namespace Personel_Takip
             string sorgu = "SELECT SUM(p_prim) FROM personel";
             OleDbCommand cmd = new OleDbCommand(sorgu, conn);
             conn.Open();
-           // int toplam = (int)cmd.ExecuteScalar();
+          
             int toplam = cmd.ExecuteScalar() != DBNull.Value ? Convert.ToInt32(cmd.ExecuteScalar()) : 0;
             conn.Close();
             return toplam;
@@ -94,16 +94,16 @@ namespace Personel_Takip
             {
                 conn.Open();
 
-                // Toplam maaş ve prim giderlerini hesapla
+             
                 int toplamMaasGider = ToplamMaasGider();
                 int toplamPrimGider = ToplamPrimGider();
 
-                // Sorguyu oluştur
+                
                 string sorgu = "INSERT INTO hesap (h_ay, h_maasgideri, h_primgider, h_toplamgider, h_digergider, h_gelir) " +
                   "VALUES (@Ay, @MaasGider, @PrimGider, @ToplamGider, @DigerGider, @Gelir)";
 
 
-                // Sorguyu yürüt
+              
                 int toplamGider = toplamMaasGider + toplamPrimGider;
                 OleDbCommand cmd = new OleDbCommand(sorgu, conn);
                 cmd.Parameters.AddWithValue("@Ay", secilenAy.ToString());
@@ -117,17 +117,18 @@ namespace Personel_Takip
                 {
                     MessageBox.Show("hata");
                 }
-                // İşlem başarılıdır
+               
                 MessageBox.Show("Hesap tablosu başarıyla güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Listele();
             }
             catch (Exception ex)
             {
-                // Hata oluştu
+            
                 MessageBox.Show("Hata: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                // Bağlantıyı kontrol et ve açıksa kapat
+               // kontrol et ve açıksa kapat
                 if (conn.State != ConnectionState.Closed)
                     conn.Close();
             }
@@ -139,6 +140,36 @@ namespace Personel_Takip
             DepartmanIsleri departmanIsleri = new DepartmanIsleri();
             departmanIsleri.Show();
             this.Hide();
+        }
+      
+        void Listele()
+        {
+            conn = new OleDbConnection("Provider=Microsoft.ACE.oledb.12.0;Data Source=GirisEkranı.accdb");
+            cmd = new OleDbCommand();
+            conn.Open();
+            cmd.Connection = conn;
+            OleDbDataAdapter adp = new OleDbDataAdapter(selectCommandText: "SELECT * FROM hesap ", conn);
+            DataTable dt = new DataTable();
+            adp.Fill(dt);
+            dataGridViewHesap.DataSource = dt;
+
+
+
+
+
+        }
+       
+        private void HesapIsleri_Load(object sender, EventArgs e)
+        {
+            Listele();
+            dataGridViewHesap.Columns["h_no"].HeaderText = "Numara";
+            dataGridViewHesap.Columns["h_ay"].HeaderText = "Ay";
+            dataGridViewHesap.Columns["h_maasgideri"].HeaderText = "Maaş Gİderi";
+            dataGridViewHesap.Columns["h_primgider"].HeaderText = "Prim Gideri";
+            dataGridViewHesap.Columns["h_toplamgider"].HeaderText = "Toplam Gider";
+            dataGridViewHesap.Columns["h_digergider"].HeaderText = "Diğer Giderler";
+            dataGridViewHesap.Columns["h_gelir"].HeaderText = "Gelir";
+
         }
     }
         
