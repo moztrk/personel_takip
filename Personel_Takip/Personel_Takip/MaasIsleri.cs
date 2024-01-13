@@ -123,7 +123,7 @@ namespace Personel_Takip
                 panelYuzde.Visible = false;
                 panelNormal.Visible = true;
 
-                // aDiğer paneli gizle
+                // aiğer paneli gizle
                 if (panelYuzde.Visible)
                 {
                     panelYuzde.Visible = false;

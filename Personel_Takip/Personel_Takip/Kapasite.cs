@@ -26,7 +26,7 @@ namespace Personel_Takip
 
         }
      
-       public static int Mevcut()
+       public static int Mevcut() // personel ekle de kullanmak için
         {
             return yonetimKapasite+muhasebeKapasite+sekreterKapasite+pazarlamaKapasite+uretimKapasite+lojistikKapasite;
         }
@@ -66,5 +66,9 @@ namespace Personel_Takip
             f1.Show();
             this.Hide();
         }
+
+        
+
+       
     }
 }

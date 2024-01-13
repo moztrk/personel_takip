@@ -45,6 +45,7 @@
             // 
             // buttonListele
             // 
+            this.buttonListele.BackColor = System.Drawing.Color.DarkOrange;
             this.buttonListele.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonListele.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonListele.ImageKey = "listeleme.png";
@@ -56,7 +57,7 @@
             this.buttonListele.TabIndex = 0;
             this.buttonListele.Text = "Personel Listesi";
             this.buttonListele.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonListele.UseVisualStyleBackColor = true;
+            this.buttonListele.UseVisualStyleBackColor = false;
             this.buttonListele.Click += new System.EventHandler(this.button1_Click);
             // 
             // ımageList1
@@ -74,6 +75,7 @@
             // 
             // buttonEkle
             // 
+            this.buttonEkle.BackColor = System.Drawing.Color.DarkOrange;
             this.buttonEkle.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEkle.ImageKey = "ekleme.png";
@@ -84,11 +86,12 @@
             this.buttonEkle.TabIndex = 1;
             this.buttonEkle.Text = "Personel Ekle";
             this.buttonEkle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonEkle.UseVisualStyleBackColor = true;
+            this.buttonEkle.UseVisualStyleBackColor = false;
             this.buttonEkle.Click += new System.EventHandler(this.buttonEkle_Click);
             // 
             // buttonSil
             // 
+            this.buttonSil.BackColor = System.Drawing.Color.DarkOrange;
             this.buttonSil.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSil.ImageKey = "sil.jpeg";
@@ -100,11 +103,12 @@
             this.buttonSil.TabIndex = 2;
             this.buttonSil.Text = "Personel Sil";
             this.buttonSil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSil.UseVisualStyleBackColor = true;
+            this.buttonSil.UseVisualStyleBackColor = false;
             this.buttonSil.Click += new System.EventHandler(this.buttonSil_Click);
             // 
             // buttonMaas
             // 
+            this.buttonMaas.BackColor = System.Drawing.Color.DarkOrange;
             this.buttonMaas.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonMaas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonMaas.ImageKey = "maaş.png";
@@ -115,7 +119,7 @@
             this.buttonMaas.TabIndex = 3;
             this.buttonMaas.Text = "Maaş Düzenle";
             this.buttonMaas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonMaas.UseVisualStyleBackColor = true;
+            this.buttonMaas.UseVisualStyleBackColor = false;
             this.buttonMaas.Click += new System.EventHandler(this.buttonMaas_Click);
             // 
             // pictureBox1
@@ -155,6 +159,7 @@
             // 
             // btnDepartman
             // 
+            this.btnDepartman.BackColor = System.Drawing.Color.DarkOrange;
             this.btnDepartman.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDepartman.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDepartman.ImageKey = "42497departmentstore_99030.ico";
@@ -165,11 +170,12 @@
             this.btnDepartman.TabIndex = 8;
             this.btnDepartman.Text = "Departman İşleri";
             this.btnDepartman.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDepartman.UseVisualStyleBackColor = true;
+            this.btnDepartman.UseVisualStyleBackColor = false;
             this.btnDepartman.Click += new System.EventHandler(this.btnDepartman_Click);
             // 
             // btnIzin
             // 
+            this.btnIzin.BackColor = System.Drawing.Color.DarkOrange;
             this.btnIzin.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnIzin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIzin.ImageKey = "sleep_umbrella_vacation_icon-icons.com_51082.ico";
@@ -180,7 +186,7 @@
             this.btnIzin.TabIndex = 9;
             this.btnIzin.Text = "İzin İşlemleri";
             this.btnIzin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIzin.UseVisualStyleBackColor = true;
+            this.btnIzin.UseVisualStyleBackColor = false;
             this.btnIzin.Click += new System.EventHandler(this.btnIzin_Click);
             // 
             // Menu

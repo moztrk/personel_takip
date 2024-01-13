@@ -42,6 +42,7 @@
             this.labelKapasite.Size = new System.Drawing.Size(1090, 376);
             this.labelKapasite.TabIndex = 0;
             this.labelKapasite.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            
             // 
             // button1
             // 

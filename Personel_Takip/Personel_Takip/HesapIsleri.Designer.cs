@@ -119,11 +119,12 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(308, 34);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Eklenecek Diğer Gider:";
+            this.label2.Text = "Eklenecek Gelir:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridViewHesap
             // 
+            this.dataGridViewHesap.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridViewHesap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHesap.Location = new System.Drawing.Point(674, 75);
             this.dataGridViewHesap.Name = "dataGridViewHesap";

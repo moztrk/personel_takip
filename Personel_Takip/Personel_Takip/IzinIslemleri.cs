@@ -59,10 +59,10 @@ namespace Personel_Takip
                 return;
             }
 
-            string selectedPerson = comboBoxIzin.SelectedItem.ToString();
-            string[] parts = selectedPerson.Split(' ');
-            string ad = parts[0];
-            string soyad = parts[1];
+            string secilenPerson = comboBoxIzin.SelectedItem.ToString();
+            string[] part = secilenPerson.Split(' ');
+            string ad = part[0];
+            string soyad = part[1];
             int izinKullanilan = Convert.ToInt32(numericUpDownIzin.Value);
 
             using (OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.oledb.12.0;Data Source=GirisEkranı.accdb"))
@@ -75,13 +75,13 @@ namespace Personel_Takip
 
                     try
                     {
-                        string queryGetIzin = "SELECT p_kalanizinhakki FROM personel WHERE p_ad = @Ad AND p_soyad = @Soyad";
-                        cmd.CommandText = queryGetIzin;
+                        string sorgu = "SELECT p_kalanizinhakki FROM personel WHERE p_ad = @Ad AND p_soyad = @Soyad";
+                        cmd.CommandText = sorgu;
                         cmd.Parameters.AddWithValue("@Ad", ad);
                         cmd.Parameters.AddWithValue("@Soyad", soyad);
                         int kalanIzin = Convert.ToInt32(cmd.ExecuteScalar());
 
-                        //izin miktarı kontrolü
+                        //izin hakkı sınırı
                         if (izinKullanilan > kalanIzin)
                         {
                             MessageBox.Show($"{ad} {soyad} adlı personelin izin hakkı yetersiz. İzin verilemez.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -89,8 +89,8 @@ namespace Personel_Takip
                         }
 
                         //izin hakkını güncelle
-                        string queryUpdateIzin = "UPDATE personel SET p_kalanizinhakki = @KalanIzin WHERE p_ad = @Ad AND p_soyad = @Soyad";
-                        cmd.CommandText = queryUpdateIzin;
+                        string queryGuncellemeIzin = "UPDATE personel SET p_kalanizinhakki = @KalanIzin WHERE p_ad = @Ad AND p_soyad = @Soyad";
+                        cmd.CommandText = queryGuncellemeIzin;
                         cmd.Parameters.Clear(); // parametreleri temizle
                         cmd.Parameters.AddWithValue("@KalanIzin", kalanIzin - izinKullanilan);
                         cmd.Parameters.AddWithValue("@Ad", ad); 

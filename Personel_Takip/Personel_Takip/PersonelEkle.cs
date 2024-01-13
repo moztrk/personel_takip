@@ -81,76 +81,7 @@ namespace Personel_Takip
             return personelSayisi;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                
-                    string ad = txtAd.Text;
-                    string soyad = txtSoyad.Text;
-                    string tc = txtTc.Text;
-                    string maas = txtMaas.Text;
-                    string departman = comboBoxDepartman.SelectedItem?.ToString();
-                    string prim = textBoxP.Text;
-                    int izin = 30;
-
-                    DateTime now = DateTime.Now;// eklenecek olan personelin işe başladığı gün
-                    string formattedDate = now.ToString("dd/MM/yyyy");
-                    string girisTarihi = formattedDate;
-
-                    int mevcutPersonelSayisi = MevcutPersonelSayisi();
-
-                    if (mevcutPersonelSayisi >= MaxPersonelSayisi)
-                    {
-                        MessageBox.Show("Personel eklenemez, maksimum personel sayısına ulaşıldı.");
-                        return;
-                    }
-
-                    if (ad == "" || soyad == "" || tc == "" || maas == "" ||prim == ""|| departman == null)
-                    {
-                        MessageBox.Show("Lütfen tüm bilgileri girin ve bir departman seçin.");
-                    }
-                    else
-                    {
-                    conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDb.12.0;Data Source=GirisEkranı.accdb");
-                    cmd = new OleDbCommand();
-                    conn.Open();
-                    cmd.Connection = conn;
-                    string query = "INSERT INTO personel (p_ad, p_soyad, p_maas, p_isegiris, p_kimlik, p_departman,p_prim,p_kalanizinhakki) " +
-                                      "VALUES (@ad, @soyad, @maas, @girisTarihi, @tc, @departman,@prim,@izin)";
-
-                    cmd.Parameters.AddWithValue("@ad", ad);
-                    cmd.Parameters.AddWithValue("@soyad", soyad);
-                    cmd.Parameters.AddWithValue("@maas", maas);
-                    cmd.Parameters.AddWithValue("@girisTarihi", girisTarihi);
-                    cmd.Parameters.AddWithValue("@tc", tc);
-                    cmd.Parameters.AddWithValue("@departman", departman);
-                    cmd.Parameters.AddWithValue("@prim", prim);
-                    cmd.Parameters.AddWithValue("@izin",izin);
-                    cmd.CommandText = query;
-                        cmd.ExecuteNonQuery();
-
-
-
-                        kalanEklemeHakki = MaxPersonelSayisi - mevcutPersonelSayisi;
-                    UpdateProgressBar();
-                    MessageBox.Show($"Personel başarıyla eklendi. Kalan personel ekleme hakkınız: {--kalanEklemeHakki}");
-                    Listele();
-                    Temizle();
-
-
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Bir hata oluştu: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-
+       
         private void Temizle()
         {
             txtAd.Text = string.Empty;
@@ -160,7 +91,7 @@ namespace Personel_Takip
             textBoxP.Text = string.Empty;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonDonMenu_Click(object sender, EventArgs e)
         {
             Menu form2 = new Menu();
             form2.Show();
@@ -251,6 +182,74 @@ namespace Personel_Takip
             }
         }
 
-       
+        private void buttonEkle_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string ad = txtAd.Text;
+                string soyad = txtSoyad.Text;
+                string tc = txtTc.Text;
+                string maas = txtMaas.Text;
+                string departman = comboBoxDepartman.SelectedItem?.ToString();
+                string prim = textBoxP.Text;
+                int izin = 30;
+
+                DateTime now = DateTime.Now;// eklenecek olan personelin işe başladığı gün
+                string formattedDate = now.ToString("dd/MM/yyyy");
+                string girisTarihi = formattedDate;
+
+                int mevcutPersonelSayisi = MevcutPersonelSayisi();
+
+                if (mevcutPersonelSayisi >= MaxPersonelSayisi)
+                {
+                    MessageBox.Show("Personel eklenemez, maksimum personel sayısına ulaşıldı.");
+                    return;
+                }
+
+                if (ad == "" || soyad == "" || tc == "" || maas == "" || prim == "" || departman == null)
+                {
+                    MessageBox.Show("Lütfen tüm bilgileri girin ve bir departman seçin.");
+                }
+                else
+                {
+                    conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDb.12.0;Data Source=GirisEkranı.accdb");
+                    cmd = new OleDbCommand();
+                    conn.Open();
+                    cmd.Connection = conn;
+                    string query = "INSERT INTO personel (p_ad, p_soyad, p_maas, p_isegiris, p_kimlik, p_departman,p_prim,p_kalanizinhakki) " +
+                                      "VALUES (@ad, @soyad, @maas, @girisTarihi, @tc, @departman,@prim,@izin)";
+
+                    cmd.Parameters.AddWithValue("@ad", ad);
+                    cmd.Parameters.AddWithValue("@soyad", soyad);
+                    cmd.Parameters.AddWithValue("@maas", maas);
+                    cmd.Parameters.AddWithValue("@girisTarihi", girisTarihi);
+                    cmd.Parameters.AddWithValue("@tc", tc);
+                    cmd.Parameters.AddWithValue("@departman", departman);
+                    cmd.Parameters.AddWithValue("@prim", prim);
+                    cmd.Parameters.AddWithValue("@izin", izin);
+                    cmd.CommandText = query;
+                    cmd.ExecuteNonQuery();
+
+
+
+                    kalanEklemeHakki = MaxPersonelSayisi - mevcutPersonelSayisi;
+                    UpdateProgressBar();
+                    MessageBox.Show($"Personel başarıyla eklendi. Kalan personel ekleme hakkınız: {--kalanEklemeHakki}");
+                    Listele();
+                    Temizle();
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bir hata oluştu: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }

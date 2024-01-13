@@ -251,7 +251,7 @@ namespace Personel_Takip
                 // txtSaatUcretiM'den değeri al
                 double yeniSaatUcreti = Convert.ToDouble(txtSaatUcretiM.Text);
 
-                // UpdateMesaiBilgisi metodunu kullanarak güncelleme yap
+               
                 UpdateMesaiBilgisi(yeniSaatUcreti);
             }
             catch (Exception ex)
@@ -267,7 +267,8 @@ namespace Personel_Takip
 
         private void MesaiIsleri_Load(object sender, EventArgs e)
         {
-            if (GirisEkrani.yetki == "personel")
+            if (GirisEkrani.yetki == "personel") //yetki
+
             {
                 btnMesaiDegis.Enabled = false;
             }

@@ -37,10 +37,10 @@
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtTc = new System.Windows.Forms.TextBox();
             this.txtMaas = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonEkle = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonListe = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonDonMenu = new System.Windows.Forms.Button();
             this.ekleProgressBar = new System.Windows.Forms.ProgressBar();
             this.labelDolulukOrani = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -129,16 +129,16 @@
             this.txtMaas.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMaas_KeyDown);
             this.txtMaas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaas_KeyPress);
             // 
-            // button1
+            // buttonEkle
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(45, 387);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 40);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "EKLE";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonEkle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.buttonEkle.Location = new System.Drawing.Point(45, 387);
+            this.buttonEkle.Name = "buttonEkle";
+            this.buttonEkle.Size = new System.Drawing.Size(122, 40);
+            this.buttonEkle.TabIndex = 10;
+            this.buttonEkle.Text = "EKLE";
+            this.buttonEkle.UseVisualStyleBackColor = true;
+            this.buttonEkle.Click += new System.EventHandler(this.buttonEkle_Click_1);
             // 
             // dataGridView1
             // 
@@ -161,16 +161,16 @@
             this.buttonListe.UseVisualStyleBackColor = true;
             this.buttonListe.Click += new System.EventHandler(this.buttonListe_Click);
             // 
-            // button2
+            // buttonDonMenu
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(1003, 421);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 54);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "ANA MENÜ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonDonMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.buttonDonMenu.Location = new System.Drawing.Point(1003, 421);
+            this.buttonDonMenu.Name = "buttonDonMenu";
+            this.buttonDonMenu.Size = new System.Drawing.Size(145, 54);
+            this.buttonDonMenu.TabIndex = 13;
+            this.buttonDonMenu.Text = "ANA MENÜ";
+            this.buttonDonMenu.UseVisualStyleBackColor = true;
+            this.buttonDonMenu.Click += new System.EventHandler(this.buttonDonMenu_Click);
             // 
             // ekleProgressBar
             // 
@@ -241,10 +241,10 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.labelDolulukOrani);
             this.Controls.Add(this.ekleProgressBar);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonDonMenu);
             this.Controls.Add(this.buttonListe);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonEkle);
             this.Controls.Add(this.txtMaas);
             this.Controls.Add(this.txtTc);
             this.Controls.Add(this.txtSoyad);
@@ -274,10 +274,10 @@
         private System.Windows.Forms.TextBox txtSoyad;
         private System.Windows.Forms.TextBox txtTc;
         private System.Windows.Forms.TextBox txtMaas;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonEkle;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonListe;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonDonMenu;
         private System.Windows.Forms.ProgressBar ekleProgressBar;
         private System.Windows.Forms.Label labelDolulukOrani;
         private System.Windows.Forms.Label label6;
